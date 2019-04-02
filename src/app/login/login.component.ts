@@ -14,47 +14,50 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.getUserLogin();
-    this.addUserLogin()
-    this.getUserLogin();
+    // this.addUserLogin()
 
-    this._ls.checkUserLogin()
+    //this._ls.checkUserLogin().subscribe();
+   
+  }
+
+
+  
+
+
+  getUserLogin() {
+    let r = this._ls.getList()
+      .subscribe(
+        next => {
+         // console.log('test', next);
+        },
+        err => {
+          console.error(err);
+          console.warn();
+        },
+        () => {
+          console.info("Completed.");
+        }
+      );
 
   }
 
-  getUserLogin(){
-    let r=this._ls.getList()
-    .subscribe(
-      next=>{
-        console.log('test',next);
-      },
-      err=>{
-        console.error(err);
-        console.warn();
-      },
-      ()=>{
-        console.info("Completed.");
-      }
-    );
-
+  addUserLogin() {
+    let r = this._ls.addToList()
+      .subscribe(
+        next => {
+          console.log('test', next);
+        },
+        err => {
+          console.error(err);
+          console.warn();
+        },
+        () => {
+          console.info("Completed.");
+        }
+      );
   }
 
-  addUserLogin(){
-    let r=this._ls.addToList()
-    .subscribe(
-      next=>{
-        console.log('test',next);
-      },
-      err=>{
-        console.error(err);
-        console.warn();
-      },
-      ()=>{
-        console.info("Completed.");
-      }
-    );
-  }
-
-  editList(){
+  editList() {
 
   }
 

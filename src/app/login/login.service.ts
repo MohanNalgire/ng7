@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, tap, flatMap} from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { find } from 'rxjs/operators';
 
@@ -30,6 +30,7 @@ export class LoginService {
   getList () {
     console.log(" getList called ");
     return this._http.get(this.apiURL);
+    
   }
 
   addToList () {
@@ -38,23 +39,18 @@ export class LoginService {
   }
 
   checkUserLogin(){
-    this.allUsers = this.getList().subscribe(
-      data=>{
-        console.log('ms ',Object.keys(data).map(function(key) {
-          console.log(data[key]);
-        }));
-
-
-        if(data){
-
-          
-        }else{}
-      },
-      err=>{},
-      ()=>{}
-    );
-
-   
+    console.log("checkUserLogin called");
+   // this.allUsers = this.getList()
+ 
+      
+      return this._http.get(this.apiURL).pipe(
+        map(res => {
+         
+          this.allUsers = res;
+          console.log("?????????????????????????????????????????????????????????/",this.allUsers)
+        })
+      );
+         
   }
 
 }
