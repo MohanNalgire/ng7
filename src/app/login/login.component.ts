@@ -10,8 +10,20 @@ export class LoginComponent implements OnInit {
 
   constructor(private _ls: LoginService) { }
 
+  
+
   ngOnInit() {
-    let r=this._ls.getUserLogin().subscribe(
+    this.getUserLogin();
+    this.addUserLogin()
+    this.getUserLogin();
+
+    this._ls.checkUserLogin()
+
+  }
+
+  getUserLogin(){
+    let r=this._ls.getList()
+    .subscribe(
       next=>{
         console.log('test',next);
       },
@@ -24,7 +36,27 @@ export class LoginComponent implements OnInit {
       }
     );
 
-   // console.log(r);
   }
+
+  addUserLogin(){
+    let r=this._ls.addToList()
+    .subscribe(
+      next=>{
+        console.log('test',next);
+      },
+      err=>{
+        console.error(err);
+        console.warn();
+      },
+      ()=>{
+        console.info("Completed.");
+      }
+    );
+  }
+
+  editList(){
+
+  }
+
 
 }
