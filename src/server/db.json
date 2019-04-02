@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "nagaraj",
+      "pwd": "biradar",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "userName": "nagaraj",
+      "pwd": "biradar",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "userName": "nagaraj",
+      "pwd": "biradar",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "userName": "nagaraj",
+      "pwd": "biradar",
+      "author": "typicode"
+    },
+    {
+      "id": 5,
+      "userName": "nagaraj",
+      "pwd": "biradar",
+      "author": "typicode"
+    },
+    {
+      "userName": "nagaraj",
+      "pwd": "biradar",
+      "author": "typicode",
+      "id": 6
+    }
+  ]
+}
