@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+
+import { User } from './../user/user';
+
+import { catchError, map, tap,filter,find } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { find } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +14,14 @@ export class LoginService {
 
   constructor(private _http: HttpClient) { }
 
-  allUsers:any;
+  allUsers:Array<User>;
   private apiURL ='http://localhost:3000/users'
 
   objBody = {
     "userName": "nagaraj",
     "pwd": "biradar",
-    "author": "typicode"
+    "author": "typicode",
+    "id":0
   }
 
   httpOptions = {
@@ -38,21 +42,15 @@ export class LoginService {
   }
 
   checkUserLogin(){
-    this.allUsers = this.getList().subscribe(
-      data=>{
-        console.log('ms ',Object.keys(data).map(function(key) {
-          console.log(data[key]);
-        }));
-
-
-        if(data){
-
-          
-        }else{}
-      },
-      err=>{},
-      ()=>{}
-    );
+    this.getList()
+    .subscribe(response => 
+      {
+        var result = Object.keys(response).map(function(key) {
+          return [Number(key), response[key]];
+        });
+        console.log('typeof',result);
+      }
+      );
 
    
   }
