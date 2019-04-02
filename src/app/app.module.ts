@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
+import { AppModule } from './app/app.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoginModule
+    LoginModule,
+    AppModule
   ],
   providers: [],
   bootstrap: [AppComponent]
