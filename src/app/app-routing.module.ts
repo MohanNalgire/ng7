@@ -22,8 +22,13 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '',
+    redirectTo:'/filenotfound',
     pathMatch: 'full'
+  },
+  {
+    path:'**',
+    redirectTo:'/filenotfound',
+    pathMatch:'full'
   }
 ];
 
