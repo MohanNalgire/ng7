@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from './../user/user';
 import { catchError, map, tap,filter,find } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
+import { Observable,BehaviorSubject, of } from 'rxjs';
 
 
 @Injectable({
@@ -12,14 +12,20 @@ export class LoginService {
 
   constructor(private _http: HttpClient) { }
 
+  private currentUserSubject: BehaviorSubject<User>;
+  public currentUser: Observable<User>;
+
+
   allUsers:Array<User>;
   private apiURL ='http://localhost:3000/users'
 
   objBody = {
-    "userName": "nagaraj",
-    "pwd": "biradar",
-    "author": "typicode",
-    "id":0
+    "id":0,
+    "username": "nagaraj",
+    "password": "12345",
+    "firstName": "Nagaraj",
+    "lastName": "Birajdar",
+    "token": "qwerfsfsfs"
   }
 
   httpOptions = {
@@ -29,7 +35,7 @@ export class LoginService {
     })
   };
   
-  getList () {
+  getList() {
     console.log(" getList called ");
     return this._http.get(this.apiURL);
     
@@ -41,6 +47,7 @@ export class LoginService {
   }
 
   checkUserLogin(){
+<<<<<<< HEAD
     console.log("checkUserLogin called");
    // this.allUsers = this.getList()
  
@@ -62,7 +69,26 @@ export class LoginService {
         console.log('typeof',result);
       }
       );
+=======
+>>>>>>> 5486adbca01a6d56f800254341bda2d78eb1955c
 
+ 
+      
+      let test=this._http.get<User[]>(this.apiURL)
+      .pipe(
+        map( results => results.filter(r =>{
+          return  r.password=="biradar" && r.username==='ravi'
+        })
+        )
+      )
+      .subscribe(result=>{
+        console.log(result);
+      });
+
+      
+      
+      
+  
    
 
   }

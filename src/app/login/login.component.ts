@@ -13,8 +13,12 @@ export class LoginComponent implements OnInit {
   
 
   ngOnInit() {
+<<<<<<< HEAD
     this.getUserLogin();
     // this.addUserLogin()
+=======
+    this._ls.checkUserLogin()
+>>>>>>> 5486adbca01a6d56f800254341bda2d78eb1955c
 
     //this._ls.checkUserLogin().subscribe();
    

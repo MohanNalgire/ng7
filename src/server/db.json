@@ -2,30 +2,31 @@
   "users": [
     {
       "id": 1,
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode"
+      "username": "nagaraj",
+      "password": "biradar",
+      "token": "typicode"
     },
     {
       "id": 2,
-      "userName": "ravi",
-      "pwd": "biradar",
-      "author": "typicode"
+      "username": "ravi",
+      "password": "biradar",
+      "token": "typicode"
     },
     {
       "id": 3,
-      "userName": "santosh",
-      "pwd": "biradar",
-      "author": "typicode"
+      "username": "santosh",
+      "password": "biradar",
+      "token": "typicode"
     },
     {
       "id": 4,
-      "userName": "rohit",
-      "pwd": "biradar",
-      "author": "typicode"
+      "username": "rohit",
+      "password": "biradar",
+      "token": "typicode"
     },
     {
       "id": 5,
+<<<<<<< HEAD
       "userName": "raj",
       "pwd": "biradar",
       "author": "typicode"
@@ -317,6 +318,11 @@
       "pwd": "biradar",
       "author": "typicode",
       "id": 53
+=======
+      "username": "raj",
+      "password": "biradar",
+      "token": "typicode"
+>>>>>>> 5486adbca01a6d56f800254341bda2d78eb1955c
     }
   ]
 }
