@@ -10,6 +10,7 @@ import { Observable,BehaviorSubject, of } from 'rxjs';
 })
 export class LoginService {
 
+  loginResult = null;
   constructor(private _http: HttpClient) { }
 
   private currentUserSubject: BehaviorSubject<User>;
@@ -47,49 +48,16 @@ export class LoginService {
   }
 
   checkUserLogin(){
-<<<<<<< HEAD
-    console.log("checkUserLogin called");
-   // this.allUsers = this.getList()
- 
-      
-     /* return this._http.get(this.apiURL).pipe(
-        map(res => {
-         
-          this.allUsers = res;
-          console.log("?????????????????????????????????????????????????????????/",this.allUsers)
-        })
-      );*/
-         
-    this.getList()
-    .subscribe(response => 
-      {
-        var result = Object.keys(response).map(function(key) {
-          return [Number(key), response[key]];
-        });
-        console.log('typeof',result);
-      }
-      );
-=======
->>>>>>> 5486adbca01a6d56f800254341bda2d78eb1955c
 
- 
+    
       
-      let test=this._http.get<User[]>(this.apiURL)
+      return this._http.get<User[]>(this.apiURL)
       .pipe(
         map( results => results.filter(r =>{
-          return  r.password=="biradar" && r.username==='ravi'
+          return  r.password=="biradar" && r.username==='raj'
         })
         )
-      )
-      .subscribe(result=>{
-        console.log(result);
-      });
-
-      
-      
-      
-  
-   
+      );
 
   }
 

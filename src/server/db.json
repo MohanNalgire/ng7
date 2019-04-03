@@ -26,303 +26,41 @@
     },
     {
       "id": 5,
-<<<<<<< HEAD
-      "userName": "raj",
-      "pwd": "biradar",
-      "author": "typicode"
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 6
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 7
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 8
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 9
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 10
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 11
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 12
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 13
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 14
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 15
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 16
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 17
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 18
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 19
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 20
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 21
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 22
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 23
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 24
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 25
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 26
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 27
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 28
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 29
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 30
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 31
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 32
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 33
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 34
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 35
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 36
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 37
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 38
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 39
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 40
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 41
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 42
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 43
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 44
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 45
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 46
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 47
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 48
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 49
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 50
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 51
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 52
-    },
-    {
-      "userName": "nagaraj",
-      "pwd": "biradar",
-      "author": "typicode",
-      "id": 53
-=======
       "username": "raj",
       "password": "biradar",
       "token": "typicode"
->>>>>>> 5486adbca01a6d56f800254341bda2d78eb1955c
+    },
+    {
+      "id": 6,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 7,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 8,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 9,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
     }
   ]
 }

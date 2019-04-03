@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(private _http: HttpClient) { }
 
-  getUser () {
+  getUser() {
     console.log(" getList called ");
     return this._http.get('http://localhost:3000/users');
     
