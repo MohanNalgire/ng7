@@ -14,6 +14,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this._ls.checkUserLogin()
+    .subscribe(result=>{
+      console.log(result);
+    });
 
   }
 
