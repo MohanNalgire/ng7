@@ -1,13 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-<<<<<<< HEAD
-import { catchError, map, tap, flatMap} from 'rxjs/operators';
-=======
-
 import { User } from './../user/user';
-
 import { catchError, map, tap,filter,find } from 'rxjs/operators';
->>>>>>> 7973996c53bc954b98c8cf9da9eb7d03c4167692
 import { Observable, of } from 'rxjs';
 
 
@@ -47,20 +41,18 @@ export class LoginService {
   }
 
   checkUserLogin(){
-<<<<<<< HEAD
     console.log("checkUserLogin called");
    // this.allUsers = this.getList()
  
       
-      return this._http.get(this.apiURL).pipe(
+     /* return this._http.get(this.apiURL).pipe(
         map(res => {
          
           this.allUsers = res;
           console.log("?????????????????????????????????????????????????????????/",this.allUsers)
         })
-      );
+      );*/
          
-=======
     this.getList()
     .subscribe(response => 
       {
@@ -72,7 +64,7 @@ export class LoginService {
       );
 
    
->>>>>>> 7973996c53bc954b98c8cf9da9eb7d03c4167692
+
   }
 
 }
