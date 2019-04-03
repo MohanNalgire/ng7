@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
 import { User } from './../user/user';
-
-import { catchError, map, tap, filter, find } from 'rxjs/operators';
-import { Observable, BehaviorSubject, throwError,of } from 'rxjs';
+import { catchError, map, tap,filter,find } from 'rxjs/operators';
+import { Observable,BehaviorSubject,throwError, of } from 'rxjs';
 
 
 @Injectable({
@@ -12,6 +10,7 @@ import { Observable, BehaviorSubject, throwError,of } from 'rxjs';
 })
 export class LoginService {
 
+  loginResult = null;
   constructor(private _http: HttpClient) { }
 
   private currentUserSubject: BehaviorSubject<User>;
@@ -40,6 +39,7 @@ export class LoginService {
   getList() {
     console.log(" getList called ");
     return this._http.get(this.apiURL);
+    
   }
 
   addToList() {

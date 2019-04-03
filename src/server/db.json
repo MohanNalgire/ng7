@@ -29,6 +29,38 @@
       "username": "raj",
       "password": "biradar",
       "token": "typicode"
+    },
+    {
+      "id": 6,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 7,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 8,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 9,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
     }
   ]
 }

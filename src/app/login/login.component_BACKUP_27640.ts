@@ -20,10 +20,12 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
+<<<<<<< HEAD
     this._ls.checkUserLogin()
     .subscribe(result=>{
       console.log(result);
     });
+=======
 
     //this.addUserLogin();
 
@@ -56,6 +58,7 @@ export class LoginComponent implements OnInit {
 
      }
 
+>>>>>>> a0960b35c24caf81e52ec242bc6425bcf38828ad
 
   }
 
