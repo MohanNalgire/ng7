@@ -9,6 +9,8 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
 import { HomeComponent } from './home/home.component';
 
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpConfigInterceptor} from './common/interceptor/httpconfig.interceptor';
 
 
 @NgModule({
@@ -22,7 +24,13 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
 
   ],
-  providers: [],
+  providers: [
+    { 
+      provide: HTTP_INTERCEPTORS, 
+      useClass: HttpConfigInterceptor, 
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
