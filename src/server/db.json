@@ -1,6 +1,5 @@
 {
-  "users": [
-    {
+  "users": [{
       "id": 1,
       "username": "nagaraj",
       "password": "biradar",
@@ -62,5 +61,57 @@
       "lastName": "Birajdar",
       "token": "qwerfsfsfs"
     }
-  ]
+  ],
+  "questions": [{
+      "id": 1,
+      "question": "Test on question",
+      "techId": 1,
+      "userId": 1
+    }
+
+  ],
+  "technologies": [{
+      "id": 1,
+      "name": "Python"
+    },
+    {
+      "id": 2,
+      "name": "Java"
+    },
+    {
+      "id": 3,
+      "name": "PHP"
+    },
+    {
+      "id": 4,
+      "name": "JavaScript"
+    },
+    {
+      "id": 5,
+      "name": "Objective-C"
+    },
+    {
+      "id": 6,
+      "name": "Ruby"
+    },
+    {
+      "id": 7,
+      "name": "Perl"
+    },
+    {
+      "id": 8,
+      "name": "C"
+    },
+    {
+      "id": 9,
+      "name": "C++"
+    },
+    {
+      "id": 10,
+      "name": "C#"
+    }
+  ],
+  "votes": [],
+  "answers": [],
+  "diffPoints": []
 }
