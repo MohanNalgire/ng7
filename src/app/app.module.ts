@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HttpConfigInterceptor} from './common/interceptor/httpconfig.interceptor';
+import { HttpConfigInterceptor} from './common/interceptors/httpconfig.interceptor';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -22,6 +23,8 @@ import { HttpConfigInterceptor} from './common/interceptor/httpconfig.intercepto
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    AdminModule
 
   ],
   providers: [
