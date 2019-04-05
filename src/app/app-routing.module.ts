@@ -5,6 +5,7 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
 import { LoginModule } from './login/login.module'
 import { HomeComponent } from './home/home.component';
 import { UserModule } from './user/user.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
     path: 'users', 
     loadChildren:'./user/user.module#UserModule' 
   },
+  { 
+    path: 'dashboard', 
+    loadChildren:'./dashboard/dashboard.module#DashboardModule' 
+  },
   {
     path: '',
     redirectTo:'/filenotfound',
@@ -40,7 +45,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [LoginModule, UserModule, 
+  imports: [LoginModule, UserModule, DashboardModule, 
     RouterModule.forRoot(routes)
   ],
   exports: [ RouterModule ]

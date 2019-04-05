@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from './login.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-login',
@@ -10,19 +11,25 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   private loginResult;
 
+  constructor(private _ls: LoginService, private router: Router) { }
+
   profileForm = new FormGroup({
     name: new FormControl(''),
     pwd: new FormControl(''),
     remember: new FormControl()
   });
-  constructor(private _ls: LoginService) { }
+
+  //profileForm.setValue({name: 'raj', pwd: 'biradar'});
+
+  
 
 
 
   ngOnInit() {
 
     //this.addUserLogin();
-
+    this.profileForm.setValue({name: 'raj', pwd: 'biradar', remember: true});
+    console.log(this.profileForm.value);
 
   }
 
@@ -37,7 +44,8 @@ export class LoginComponent implements OnInit {
           this.loginResult = result[0];
           if (this.loginResult) {
             if(enteredValue.name == this.loginResult.username && enteredValue.pwd == this.loginResult.password){
-            console.log('valid user');
+              console.log('valid user');
+              this.router.navigate(['/dashboard']);
             }
             else{
               console.log('Not a valid user',enteredValue);
