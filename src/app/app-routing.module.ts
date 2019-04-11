@@ -17,22 +17,22 @@ import { HttpConfigInterceptor } from './common/interceptors/httpconfig.intercep
 
 
 const routes: Routes = [
- 
-  { 
-    path: 'home', 
-    component:HomeComponent 
+
+  {
+    path: 'home',
+    component:HomeComponent
   },
-  { 
-    path: 'filenotfound', 
-    component:FileNotFoundComponent 
+  {
+    path: 'filenotfound',
+    component:FileNotFoundComponent
   },
-  { 
-    path: 'login', 
-    loadChildren:'./login/login.module#LoginModule' 
+  {
+    path: 'login',
+    loadChildren:'./login/login.module#LoginModule'
   },
-  { 
-    path: 'users', 
-    loadChildren:'./user/user.module#UserModule' 
+  {
+    path: 'users',
+    loadChildren:'./user/user.module#UserModule'
   },
   {
     path: '',
@@ -55,19 +55,19 @@ const routes: Routes = [
   ],
   imports: [
     HttpClientModule,
-    LoginModule, 
-    UserModule,     
+    LoginModule,
+    UserModule,
     AdminModule,
     QuestionsModule,
     RouterModule.forRoot(routes),
-    
+
   ],
   exports: [ RouterModule ],
   providers:[
     QuestionsService,
-    { 
-      provide: HTTP_INTERCEPTORS, 
-      useClass: HttpConfigInterceptor, 
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpConfigInterceptor,
       multi: true
     },
   ]
