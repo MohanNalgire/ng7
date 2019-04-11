@@ -39,7 +39,7 @@ export class LoginService {
   getList() {
     console.log(" getList called ");
     return this._http.get(this.apiURL);
-    
+
   }
 
   addToList() {

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { User } from './user';
+import { Store, select } from '@ngrx/store';
+import { AppState } from './store/user.reducer';
+import * as fromUser from './store/user.reducer';
+import * as userActions from './store/user.actions';
+import * as fromUserSelector from './store/user.selectors';
 
 @Component({
   selector: 'app-user',
@@ -9,28 +14,17 @@ import { User } from './user';
 })
 export class UserComponent implements OnInit {
 
-  private usersList:any;
+  private usersList$: any;
 
-  constructor(private _us: UserService ) { }
+  constructor(private _store: Store<fromUser.AppState>, private _us: UserService) { }
 
   ngOnInit() {
     this.displayUserData();
   }
 
-  displayUserData(){
-console.log("displayUserData() called ")
-    this._us.getUser().subscribe(
-      res=>{
-      console.log("list ", res);
-      this.usersList = res;
-      },
-      err=>{
-        console.log("Error ");
-      },
-      ()=>{ console.log("Completed "); }
-
-
-  );
+  displayUserData() {
+    this._store.dispatch(new userActions.LoadUser());
+    this.usersList$ = this._store.pipe(select(fromUserSelector.getUsers));
   }
 
 }

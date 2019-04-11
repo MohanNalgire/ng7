@@ -9,40 +9,48 @@ import { AppComponent } from './app.component';
 import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
 import { HomeComponent } from './home/home.component';
 
-//SErvices
+//Services
 import { QuestionsService } from './questions/questions.service';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpConfigInterceptor } from './common/interceptors/httpconfig.interceptor';
 
+//Store setup
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+
+import { environment } from 'src/environments/environment.prod';
 
 const routes: Routes = [
 
   {
     path: 'home',
-    component:HomeComponent
+    component: HomeComponent
   },
   {
     path: 'filenotfound',
-    component:FileNotFoundComponent
+    component: FileNotFoundComponent
   },
   {
     path: 'login',
-    loadChildren:'./login/login.module#LoginModule'
+    loadChildren: './login/login.module#LoginModule'
   },
   {
     path: 'users',
-    loadChildren:'./user/user.module#UserModule'
+    loadChildren: './user/user.module#UserModule'
   },
   {
     path: '',
-    redirectTo:'/home',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
-    path:'**',
-    redirectTo:'/filenotfound',
-    pathMatch:'full'
+    path: '**',
+    redirectTo: '/filenotfound',
+    pathMatch: 'full'
   }
 ];
 
@@ -54,16 +62,20 @@ const routes: Routes = [
     HomeComponent
   ],
   imports: [
+
+    RouterModule.forRoot(routes),
+    //
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    environment.production ? StoreDevtoolsModule.instrument() : [],
     HttpClientModule,
     LoginModule,
     UserModule,
     AdminModule,
     QuestionsModule,
-    RouterModule.forRoot(routes),
-
   ],
-  exports: [ RouterModule ],
-  providers:[
+  exports: [RouterModule],
+  providers: [
     QuestionsService,
     {
       provide: HTTP_INTERCEPTORS,

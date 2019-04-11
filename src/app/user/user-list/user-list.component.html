@@ -1,0 +1,23 @@
+<div class="table-responsive" style="width: 50%;">
+  <table class="table table-bordered">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Password</th>
+      <th>Token</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Permisssions</th>
+    </tr>
+    <tr *ngFor="let user of usersList|keyvalue ">
+      <td>{{user.value.id}}</td>
+      <td>{{user.value.username}}</td>
+      <td>{{user.value.password}}</td>
+      <td>{{user.value.token}}</td>
+      <td>{{user.value.firstName}}</td>
+      <td>{{user.value.lastName}}</td>
+      <td>{{user.value.permisssions}}</td>
+
+    </tr>
+  </table>
+</div>
