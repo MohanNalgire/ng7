@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule }    from '@angular/common/http';
 import { UserRoutingModule } from './user-routing.module';
@@ -12,15 +12,30 @@ import { StoreModule } from '@ngrx/store';
 import { UserReducer } from './store/user.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { userEffects } from './store/user.effects';
+
+import { FormsModule } from '@angular/forms';
+
+
+import { TableModule } from 'primeng/table';
+
+
 @NgModule({
-  declarations: [UserComponent, UserAddComponent, UserEditComponent, UserListComponent],
+  declarations: [
+    UserComponent,
+    UserAddComponent,
+    UserEditComponent,
+    UserListComponent
+  ],
   imports: [
     CommonModule,
+    FormsModule,
+    TableModule,
     UserRoutingModule,
     HttpClientModule,
     StoreModule.forFeature('users',UserReducer),
     EffectsModule.forFeature([userEffects])
   ],
-  providers:[UserService]
+  providers:[UserService],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class UserModule { }

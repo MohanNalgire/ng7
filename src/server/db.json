@@ -63,12 +63,32 @@
       "token": "qwerfsfsfs"
     }
   ],
-  "questions": [{
+  "questions": [
+    {
       "id": 1,
       "question": "Test on question",
-      "techId": 1,
+      "techIds": [1,2,3,4,5],
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "question": "Test on question",
+      "techIds": [2,3,4,5],
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "question": "Test on question",
+      "techIds": [3,4,5],
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "question": "Test on question",
+      "techIds": [4,5],
       "userId": 1
     }
+
 
   ],
   "technologies": [{

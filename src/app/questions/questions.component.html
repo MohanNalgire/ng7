@@ -1,3 +1,17 @@
-<p>
-  questions works!
-</p>
+<div class="questions" *ngFor="let question of questionsList">
+  {{question|json}}
+
+  <div class="row">
+    <div class="col-md-2">{{question.id}}</div>
+    <div class="col-md-8">{{question.question}}</div>
+    <div class="col-md-2">{{question.userId}}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">{{question.techIds}}</div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6"></div>
+    </div>
+</div>
