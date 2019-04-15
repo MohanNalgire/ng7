@@ -6,9 +6,10 @@ import { LoginComponent } from './login.component';
 import { LoginService } from './login.service';
 import { FormsModule } from '../../../node_modules/@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, LogoutComponent],
   imports: [
     CommonModule,
     HttpClientModule,

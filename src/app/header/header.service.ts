@@ -8,6 +8,7 @@ export class HeaderService {
     'welcome':boolean,
     'signup':boolean,
     'login':boolean,
+    'logout':boolean,
     'home':boolean,
     'users':boolean,
     'questions':boolean

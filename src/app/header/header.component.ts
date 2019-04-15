@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
               'welcome': false,
               'signup': true,
               'login': false,
+              'logout':false,
               'home': false,
               'users': false,
               'questions':false
@@ -39,6 +40,7 @@ export class HeaderComponent implements OnInit {
               'welcome': false,
               'signup': true,
               'login': false,
+              'logout':false,
               'home': false,
               'users': false,
               'questions':false
@@ -49,19 +51,21 @@ export class HeaderComponent implements OnInit {
               'welcome': false,
               'signup': false,
               'login': false,
+              'logout':false,
               'home': false,
               'users': false,
               'questions':false
             };
             break;
-          case '/':
+          case '/home':
             this.nav.visible = {
               'welcome': false,
-              'signup': true,
+              'signup': false,
               'login': false,
-              'home': false,
-              'users': false,
-              'questions':false
+              'logout':true,
+              'home': true,
+              'users': true,
+              'questions':true
             };
             break;
           default:
@@ -69,6 +73,7 @@ export class HeaderComponent implements OnInit {
               'welcome': false,
               'signup': true,
               'login': false,
+              'logout':false,
               'home': false,
               'users': false,
               'questions':false
