@@ -29,12 +29,12 @@ export class LoginComponent implements OnInit {
     var enteredValue = this.profileForm.value;
 
     if (enteredValue) {
-      this._ls.checkUserLogin()
+      this._ls.checkUserLogin(enteredValue.name,enteredValue.pwd)
         .subscribe(result => {
           console.log("result", result);
           this.loginResult = result[0];
           if (this.loginResult) {
-            if (enteredValue.name == this.loginResult.username && enteredValue.pwd == this.loginResult.password) {
+            if (enteredValue.name === this.loginResult.username && enteredValue.pwd === this.loginResult.password) {
               console.log('valid user');
               this.router.navigate(['/home']);
             }

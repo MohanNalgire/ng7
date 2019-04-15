@@ -47,12 +47,13 @@ export class LoginService {
     return this._http.post(this.apiURL, this.objBody, this.httpOptions);
   }
 
-  checkUserLogin() {
+  checkUserLogin(username,password) {
 
     return this._http.get<User[]>(this.apiURL)
       .pipe(
         map(results => results.filter(r => {
-          return r.password == "biradar" && r.username === 'ravi'
+          console.log('test user',username,password);
+          return r.password ===password&& r.username===username
         })
         ),
         catchError(error => {
