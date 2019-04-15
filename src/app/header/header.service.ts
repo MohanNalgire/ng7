@@ -10,6 +10,7 @@ export class HeaderService {
     'login':false,
     'home':false,
     'users':false,
+    'questions':false
   };
 
   constructor() { }

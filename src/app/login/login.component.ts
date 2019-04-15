@@ -19,16 +19,7 @@ export class LoginComponent implements OnInit {
 
 
 
-  ngOnInit() {
-    this._ls.checkUserLogin()
-    .subscribe(result=>{
-      console.log(result);
-    });
-
-    //this.addUserLogin();
-
-
-  }
+  ngOnInit() {}
 
   loginSubmit() {
     console.warn(this.profileForm.value.name);
@@ -47,7 +38,7 @@ export class LoginComponent implements OnInit {
               console.log('Not a valid user',enteredValue);
             }
           } else {
-           
+
           }
           console.log("loginResult ==> ", this.loginResult);
         });;
@@ -55,49 +46,9 @@ export class LoginComponent implements OnInit {
     } else {
 
      }
-
-
   }
 
 
-
-
-  getUserLogin() {
-    let r = this._ls.getList()
-      .subscribe(
-        next => {
-          // console.log('test', next);
-        },
-        err => {
-          console.error(err);
-          console.warn();
-        },
-        () => {
-          console.info("Completed.");
-        }
-      );
-
-  }
-
-  addUserLogin() {
-    let r = this._ls.addToList()
-      .subscribe(
-        next => {
-          console.log('test', next);
-        },
-        err => {
-          console.error(err);
-          console.warn();
-        },
-        () => {
-          console.info("Completed.");
-        }
-      );
-  }
-
-  editList() {
-
-  }
 
 
 }

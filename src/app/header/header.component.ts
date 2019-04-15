@@ -31,6 +31,7 @@ export class HeaderComponent implements OnInit {
               'login': false,
               'home': false,
               'users': false,
+              'questions':false
             };
             break;
           case '/login':
@@ -40,6 +41,7 @@ export class HeaderComponent implements OnInit {
               'login': false,
               'home': false,
               'users': false,
+              'questions':false
             };
             break;
           case '/signup':
@@ -49,6 +51,7 @@ export class HeaderComponent implements OnInit {
               'login': false,
               'home': false,
               'users': false,
+              'questions':false
             };
             break;
           case '/':
@@ -58,6 +61,7 @@ export class HeaderComponent implements OnInit {
               'login': false,
               'home': false,
               'users': false,
+              'questions':false
             };
             break;
           default:
@@ -67,6 +71,7 @@ export class HeaderComponent implements OnInit {
               'login': false,
               'home': false,
               'users': false,
+              'questions':false
             };;
         }
       }
