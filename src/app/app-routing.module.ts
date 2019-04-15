@@ -27,6 +27,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ConfigComponent } from './config/config.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -80,7 +81,7 @@ const routes: Routes = [
 
   ],
   imports: [
-
+    CommonModule,
     RouterModule.forRoot(routes),
     //
     StoreModule.forRoot({}),
