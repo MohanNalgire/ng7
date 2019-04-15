@@ -4,20 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HeaderService {
-  visible:boolean;
+  visible:{
+    'welcome':false,
+    'signup':true,
+    'login':false,
+    'home':false,
+    'users':false,
+  };
 
   constructor() { }
 
-  show(){
-    return this.visible=true;
-  }
 
-  hide(){
-    return this.visible=false;
-  }
-
-  toggle(){
-    return this.visible= !this.visible;
-  }
 
 }

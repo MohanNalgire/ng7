@@ -20,20 +20,54 @@ export class HeaderComponent implements OnInit {
 
   getCurrentPageUrl() {
     this.router.events.subscribe((event: Event) => {
-      console.log(event,this.nav);
-      if (event instanceof NavigationEnd) {
 
+      if (event instanceof NavigationEnd) {
+        console.log(event.url);
         switch (event.url) {
           case '/welcome':
-            this.nav.visible = false; break;
+            this.nav.visible = {
+              'welcome': false,
+              'signup': true,
+              'login': false,
+              'home': false,
+              'users': false,
+            };
+            break;
           case '/login':
-            this.nav.visible = false; break;
+            this.nav.visible = {
+              'welcome': false,
+              'signup': true,
+              'login': false,
+              'home': false,
+              'users': false,
+            };
+            break;
           case '/signup':
-            this.nav.visible = false; break;
+            this.nav.visible = {
+              'welcome': false,
+              'signup': true,
+              'login': false,
+              'home': false,
+              'users': false,
+            };
+            break;
           case '/':
-            this.nav.visible = false; break;
+            this.nav.visible = {
+              'welcome': false,
+              'signup': true,
+              'login': false,
+              'home': false,
+              'users': false,
+            };
+            break;
           default:
-            this.nav.visible = true;
+            this.nav.visible = {
+              'welcome': false,
+              'signup': true,
+              'login': false,
+              'home': false,
+              'users': false,
+            };;
         }
       }
     });

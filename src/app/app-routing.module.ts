@@ -28,11 +28,19 @@ import { ConfigComponent } from './config/config.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { SignupComponent } from './login/signup/signup.component';
+import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
     path:'app',
     component:AppComponent
+  },
+  {
+    path:'welcome',
+    component:WelcomeComponent
   },
   {
     path: 'home',
@@ -47,6 +55,14 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginModule'
   },
   {
+    path:'signup',
+    component:SignupComponent
+  },
+  {
+    path:'forgorpassword',
+    component:ForgotPasswordComponent
+  },
+  {
     path: 'users',
     loadChildren: './user/user.module#UserModule'
   },
@@ -57,7 +73,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/app',
+    redirectTo: '/welcome',
     pathMatch: 'full'
   },
   {
@@ -71,13 +87,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     ConfigComponent,
-    FooterComponent,
-
     HeaderComponent,
-
+    FooterComponent,
     MainpageComponent,
     FileNotFoundComponent,
     HomeComponent,
+    WelcomeComponent,
+
 
   ],
   imports: [
