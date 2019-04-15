@@ -47,7 +47,7 @@ export class HeaderComponent implements OnInit {
           case '/signup':
             this.nav.visible = {
               'welcome': false,
-              'signup': true,
+              'signup': false,
               'login': false,
               'home': false,
               'users': false,

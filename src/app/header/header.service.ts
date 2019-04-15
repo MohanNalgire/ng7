@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class HeaderService {
   visible:{
-    'welcome':false,
-    'signup':true,
-    'login':false,
-    'home':false,
-    'users':false,
-    'questions':false
+    'welcome':boolean,
+    'signup':boolean,
+    'login':boolean,
+    'home':boolean,
+    'users':boolean,
+    'questions':boolean
   };
 
   constructor() { }

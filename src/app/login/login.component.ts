@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from './login.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,9 @@ export class LoginComponent implements OnInit {
     pwd: new FormControl(''),
     remember: new FormControl()
   });
-  constructor(private _ls: LoginService) { }
+  constructor(
+    private router:Router,
+    private _ls: LoginService) { }
 
 
 
@@ -33,9 +36,11 @@ export class LoginComponent implements OnInit {
           if (this.loginResult) {
             if (enteredValue.name == this.loginResult.username && enteredValue.pwd == this.loginResult.password) {
               console.log('valid user');
+              this.router.navigate(['/home']);
             }
             else {
               console.log('Not a valid user', enteredValue);
+              this.router.navigate(['/signup']);
             }
           } else {
 
