@@ -19,33 +19,33 @@ export class LoginComponent implements OnInit {
 
 
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   loginSubmit() {
     console.warn(this.profileForm.value.name);
     var enteredValue = this.profileForm.value;
 
-    if (this.profileForm.value) {
-      let whatValue = this._ls.checkUserLogin()
+    if (enteredValue) {
+      this._ls.checkUserLogin()
         .subscribe(result => {
           console.log("result", result);
           this.loginResult = result[0];
           if (this.loginResult) {
-            if(enteredValue.name == this.loginResult.username && enteredValue.pwd == this.loginResult.password){
-            console.log('valid user');
+            if (enteredValue.name == this.loginResult.username && enteredValue.pwd == this.loginResult.password) {
+              console.log('valid user');
             }
-            else{
-              console.log('Not a valid user',enteredValue);
+            else {
+              console.log('Not a valid user', enteredValue);
             }
           } else {
 
           }
-          console.log("loginResult ==> ", this.loginResult);
-        });;
-      console.log("whatValue", whatValue);
+
+        });
+
     } else {
 
-     }
+    }
   }
 
 
