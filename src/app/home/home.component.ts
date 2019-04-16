@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,10 @@ import { QuestionsService } from '../questions/questions.service';
 export class HomeComponent implements OnInit {
 
   public questions:Array<any>;
-  constructor(private qt:QuestionsService) { }
+  constructor(private login:LoginService) { }
 
   ngOnInit() {
-
+    this.login.isUserLogedIn();
   }
 
 

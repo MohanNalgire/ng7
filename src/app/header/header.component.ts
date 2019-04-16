@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter } from '@angular/core';
 import { Router, NavigationEnd, Event } from '@angular/router';
-import { HeaderService } from './header.service';
+import { HeaderService, VisibleMenu } from './header.service';
+import { observable, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -8,79 +9,53 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  public visibleMenu:{};
+  public currentPage;
   constructor(
     private router: Router,
-    private nav: HeaderService
+    private headerService: HeaderService
   ) { }
 
   ngOnInit() {
+
     this.getCurrentPageUrl();
+
   }
 
   getCurrentPageUrl() {
     this.router.events.subscribe((event: Event) => {
-
       if (event instanceof NavigationEnd) {
-        console.log(event.url);
-        switch (event.url) {
-          case '/welcome':
-            this.nav.visible = {
-              'welcome': false,
-              'signup': true,
-              'login': false,
-              'logout':false,
-              'home': false,
-              'users': false,
-              'questions':false
-            };
-            break;
-          case '/login':
-            this.nav.visible = {
-              'welcome': false,
-              'signup': true,
-              'login': false,
-              'logout':false,
-              'home': false,
-              'users': false,
-              'questions':false
-            };
-            break;
-          case '/signup':
-            this.nav.visible = {
-              'welcome': false,
-              'signup': false,
-              'login': false,
-              'logout':false,
-              'home': false,
-              'users': false,
-              'questions':false
-            };
-            break;
-          case '/home':
-            this.nav.visible = {
-              'welcome': false,
-              'signup': false,
-              'login': false,
-              'logout':true,
-              'home': true,
-              'users': true,
-              'questions':true
-            };
-            break;
-          default:
-            this.nav.visible = {
-              'welcome': false,
-              'signup': true,
-              'login': false,
-              'logout':false,
-              'home': false,
-              'users': false,
-              'questions':false
-            };;
-        }
+            this.currentPage=event.url;
+            this.visibleMenu=this.headerService.getMenuByUrl(this.currentPage)
+            .subscribe(
+              result=>{
+                this.visibleMenu=result;
+                console.log('header setting',this.visibleMenu);
+              },
+              error=>{
+                console.error('header setting error',error);
+              },
+              ()=>{}
+            );
       }
     });
+  }
+
+
+  setVisibleMenu(currenPage)
+  {
+    console.log('test 1q');
+
+    /* .subscribe(
+      result=>{
+        console.log("/questions",result);
+        this.visibleMenu=result;
+      },
+      error=>{
+        console.error('questions menu service.',error);
+      },
+      ()=>{});
+ */
   }
 
 }

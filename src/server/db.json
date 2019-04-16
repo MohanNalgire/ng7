@@ -67,31 +67,48 @@
     {
       "id": 1,
       "question": "Test on question",
-      "techIds": [1,2,3,4,5],
+      "techIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "userId": 1
     },
     {
       "id": 2,
       "question": "Test on question",
-      "techIds": [2,3,4,5],
+      "techIds": [
+        2,
+        3,
+        4,
+        5
+      ],
       "userId": 1
     },
     {
       "id": 3,
       "question": "Test on question",
-      "techIds": [3,4,5],
+      "techIds": [
+        3,
+        4,
+        5
+      ],
       "userId": 1
     },
     {
       "id": 4,
       "question": "Test on question",
-      "techIds": [4,5],
+      "techIds": [
+        4,
+        5
+      ],
       "userId": 1
     }
-
-
   ],
-  "technologies": [{
+  "technologies": [
+    {
       "id": 1,
       "name": "Python"
     },
@@ -134,5 +151,73 @@
   ],
   "votes": [],
   "answers": [],
-  "diffPoints": []
+  "diffPoints": [],
+  "headerMenu": [
+    {
+      "id":1,
+      "title": "welcome",
+      "welcome": false,
+      "signup": true,
+      "login": true,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id":2,
+      "title": "login",
+      "welcome": false,
+      "signup": true,
+      "login": false,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id":3,
+      "title": "logout",
+      "welcome": false,
+      "signup": true,
+      "login": true,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id":4,
+      "title": "signup",
+      "welcome": false,
+      "signup": false,
+      "login": false,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id":5,
+      "title": "home",
+      "welcome": false,
+      "signup": false,
+      "login": false,
+      "logout": true,
+      "home": true,
+      "users": true,
+      "questions": true
+    },
+    {
+      "id":6,
+      "title": "questions",
+      "welcome": false,
+      "signup": true,
+      "login": false,
+      "logout": true,
+      "home": true,
+      "users": true,
+      "questions": true
+    }
+  ]
 }

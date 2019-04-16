@@ -29,9 +29,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { SignupComponent } from './login/signup/signup.component';
-import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
-import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './common/guards/auth.guard';
+
 
 const routes: Routes = [
   {
@@ -44,7 +43,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'filenotfound',
@@ -55,16 +55,9 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginModule'
   },
   {
-    path:'signup',
-    component:SignupComponent
-  },
-  {
-    path:'forgorpassword',
-    component:ForgotPasswordComponent
-  },
-  {
     path: 'users',
-    loadChildren: './user/user.module#UserModule'
+    loadChildren: './user/user.module#UserModule',
+    canActivate:[AuthGuard]
   },
   {
     path: 'questions',

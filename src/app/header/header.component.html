@@ -1,15 +1,15 @@
-{{nav.visible|json}}
+
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="nav?.visible">
-    <a class="navbar-brand" routerLink="home" routerLinkActive="active"  *ngIf="nav?.visible.home">Home</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="nav?.visibleMenu">
+    <a class="navbar-brand" routerLink="home" routerLinkActive="active"  *ngIf="nav?.visibleMenu.home">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto" *ngIf="nav.visible" >
+      <ul class="navbar-nav mr-auto" *ngIf="nav.visibleMenu" >
         <li class="nav-item active">
-          <a class="nav-link" routerLink="questions" *ngIf="nav?.visible.questions">Questions <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="questions" *ngIf="nav?.visibleMenu.questions">Questions <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" *ngIf="false">Link</a>
@@ -27,19 +27,19 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link disabled" routerLink="users" *ngIf="nav?.visible.Users">Users</a>
+          <a class="nav-link disabled" routerLink="users" *ngIf="nav?.visibleMenu.Users">Users</a>
         </li>
 
       </ul>
-      <ul class='mr-auto' *ngIf="!nav?.visible" ></ul>
+      <ul class='mr-auto' *ngIf="!nav?.visibleMenu" ></ul>
       <form class="form-inline my-2 my-lg-0">
         <!--
           <input class="form-control mr-sm-2" type="text" placeholder="User Id" aria-label="userId">
         <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
         -->
-        <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/login" *ngIf="nav?.visible.login" >Login</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/signup" *ngIf="nav?.visible.signup" >Sign Up</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/logout" *ngIf="nav?.visible.logout" >Logout</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-1" routerLink="/login" *ngIf="nav?.visibleMenu.login" >Login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-1" routerLink="/signup" *ngIf="nav?.visibleMenu.signup" >Sign Up</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-1" routerLink="/logout" *ngIf="nav?.visibleMenu.logout" >Logout</button>
       </form>
     </div>
   </nav>

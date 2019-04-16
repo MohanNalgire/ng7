@@ -36,6 +36,16 @@ export class LoginComponent implements OnInit {
           if (this.loginResult) {
             if (enteredValue.name === this.loginResult.username && enteredValue.pwd === this.loginResult.password) {
               console.log('valid user');
+              //Session storage;
+              let userDetails={
+                'userId':enteredValue.id,
+                'userName':enteredValue.name,
+                'userPassword':enteredValue.pwd,
+              };
+              if(userDetails){
+                sessionStorage.setItem('userDetails',JSON.stringify(userDetails));
+              }
+
               this.router.navigate(['/home']);
             }
             else {

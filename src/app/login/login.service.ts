@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from './../user/user';
-import { catchError, map, tap,filter,find } from 'rxjs/operators';
-import { Observable,BehaviorSubject,throwError, of } from 'rxjs';
+import { catchError, map, tap, filter, find } from 'rxjs/operators';
+import { Observable, BehaviorSubject, throwError, of } from 'rxjs';
+import { UserService } from '../user/user.service';
 
 
 @Injectable({
@@ -11,7 +12,7 @@ import { Observable,BehaviorSubject,throwError, of } from 'rxjs';
 export class LoginService {
 
   loginResult = null;
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient,private userService:UserService) { }
 
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
@@ -47,26 +48,47 @@ export class LoginService {
     return this._http.post(this.apiURL, this.objBody, this.httpOptions);
   }
 
-  checkUserLogin(username,password) {
-
+  checkUserLogin(username, password) {
     return this._http.get<User[]>(this.apiURL)
       .pipe(
         map(results => results.filter(r => {
-          console.log('test user',username,password);
-          return r.password ===password&& r.username===username
+          console.log('test user', username, password);
+          return r.password === password && r.username === username
         })
         ),
         catchError(error => {
           console.error('Error in service.', error);
-          if(error.status==0){
+          if (error.status == 0) {
             return throwError('Please check your server is running or not.');
           }
           return throwError(error);
         })
 
       );
-
-
   }
+
+
+  isUserLogedIn() {
+    let userDetails: any;
+    userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
+    if (userDetails) {
+      return (userDetails.userName && userDetails.userPassword) ? true : false;
+    } else {
+      return false;
+    }
+  }
+
+
+
+   logout(){
+     let status;
+     status=sessionStorage.removeItem('userDetails');
+        if(status==undefined){
+          console.log('test on logout');
+          return true;
+        }else{
+          return false;
+        }
+      }
 
 }
