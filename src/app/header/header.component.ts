@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
             this.visibleMenu=this.headerService.getMenuByUrl(this.currentPage)
             .subscribe(
               result=>{
-                this.visibleMenu=result;
+                this.visibleMenu=result[0];
                 console.log('header setting',this.visibleMenu);
               },
               error=>{
