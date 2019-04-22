@@ -29,9 +29,7 @@
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/primeng/resources/themes/darkness/theme.css"
             ],
-            "scripts": [
-
-            ],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -58,6 +56,30 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "testing": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stag.ts"
+                }
+              ]
+            },
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
             }
           }
         },
@@ -68,7 +90,16 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "ng7project:build:production"
+              "browserTarget": "ng7project:build:prod"
+            },
+            "testing": {
+              "browserTarget": "ng7project:build:testing"
+            },
+            "staging": {
+              "browserTarget": "ng7project:build:staging"
+            },
+            "development": {
+              "browserTarget": "ng7project:build:development"
             }
           }
         },
