@@ -30,6 +30,7 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuard } from './common/guards/auth.guard';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 const routes: Routes = [
@@ -86,7 +87,7 @@ const routes: Routes = [
     FileNotFoundComponent,
     HomeComponent,
     WelcomeComponent,
-
+    SidebarComponent
 
   ],
   imports: [

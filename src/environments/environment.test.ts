@@ -1,5 +1,13 @@
 export const environment = {
+    name:'testing',
     testing: true,
     production:false,
-    name:'testing'
+
+    apiUrls:{
+        "users":'',
+        "login":'',
+        "header":'',
+        "questions":'',
+        "admin":''
+    }
   };

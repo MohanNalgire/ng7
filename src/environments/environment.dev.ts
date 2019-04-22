@@ -1,5 +1,12 @@
 export const environment = {
+    name:'development',
     development: true,
     production:false,
-    name:'development'
+
+    apiUrls:{
+        "users":'',
+        "login":'',
+        "header":'',
+        "questions":''
+    }
   };

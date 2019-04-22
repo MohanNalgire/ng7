@@ -1,5 +1,14 @@
 export const environment = {
+    name:'staging',
     staging: true,
     production:false,
-    name:'staging'
+
+
+    apiUrls:{
+        "users":'',
+        "login":'',
+        "header":'',
+        "questions":'',
+        "admin":''
+    }
   };
