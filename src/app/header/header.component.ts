@@ -1,4 +1,4 @@
-import { Component, OnInit,EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Router, NavigationEnd, Event } from '@angular/router';
 import { HeaderService, VisibleMenu } from './header.service';
 import { observable, Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { observable, Observable } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  public visibleMenu:{};
+  public visibleMenu: {};
   public currentPage;
   constructor(
     private router: Router,
@@ -23,27 +23,36 @@ export class HeaderComponent implements OnInit {
   }
 
   getCurrentPageUrl() {
+
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-            this.currentPage=event.url;
-            this.visibleMenu=this.headerService.getMenuByUrl(this.currentPage)
+        this.currentPage = event.url;
+        if (this.currentPage) {
+          let urlSplit = this.currentPage.split('/');
+          let pageName;
+          if (urlSplit[1] && urlSplit[1]!=='') {
+            pageName = `?title=${urlSplit[1]}`;
+          } else {
+            pageName = `?title=${this.router.url.replace('/','')}`;
+          }
+
+          this.visibleMenu = this.headerService.getMenuByUrl(pageName)
             .subscribe(
-              result=>{
-                this.visibleMenu=result[0];
-                console.log('header setting',this.visibleMenu);
+              result => {
+                this.visibleMenu = result[0];
               },
-              error=>{
-                console.error('header setting error',error);
+              error => {
+                console.error('header setting error', error);
               },
-              ()=>{}
+              () => { }
             );
+        }
       }
-    });
+      });
   }
 
 
-  setVisibleMenu(currenPage)
-  {
+  setVisibleMenu(currenPage) {
     console.log('test 1q');
 
     /* .subscribe(

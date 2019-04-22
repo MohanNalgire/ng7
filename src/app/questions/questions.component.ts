@@ -26,6 +26,7 @@ export class QuestionsComponent implements OnInit {
       .subscribe(
         (result)=> {
           console.log('result', result);
+          this.questionsList=result;
           let resultArrUpdated=result;
 
           resultArrUpdated[0].map(q=>

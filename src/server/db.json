@@ -85,7 +85,7 @@
         4,
         5
       ],
-      "userId": 1
+      "userId": 2
     },
     {
       "id": 3,
@@ -95,7 +95,7 @@
         4,
         5
       ],
-      "userId": 1
+      "userId": 3
     },
     {
       "id": 4,
@@ -104,7 +104,7 @@
         4,
         5
       ],
-      "userId": 1
+      "userId": 5
     }
   ],
   "technologies": [
@@ -150,11 +150,21 @@
     }
   ],
   "votes": [],
-  "answers": [],
-  "diffPoints": [],
+  "answers": [
+    {
+      "id": 1,
+      "questionId": 1,
+      "answer": ""
+    },
+    {
+      "id": 2,
+      "questionId": 1,
+      "answer": ""
+    }
+  ],
   "headerMenu": [
     {
-      "id":1,
+      "id": 1,
       "title": "welcome",
       "welcome": false,
       "signup": true,
@@ -165,7 +175,7 @@
       "questions": false
     },
     {
-      "id":2,
+      "id": 2,
       "title": "login",
       "welcome": false,
       "signup": true,
@@ -176,7 +186,7 @@
       "questions": false
     },
     {
-      "id":3,
+      "id": 3,
       "title": "logout",
       "welcome": false,
       "signup": true,
@@ -187,7 +197,7 @@
       "questions": false
     },
     {
-      "id":4,
+      "id": 4,
       "title": "signup",
       "welcome": false,
       "signup": false,
@@ -198,7 +208,7 @@
       "questions": false
     },
     {
-      "id":5,
+      "id": 5,
       "title": "home",
       "welcome": false,
       "signup": false,
@@ -209,15 +219,44 @@
       "questions": true
     },
     {
-      "id":6,
+      "id": 6,
       "title": "questions",
       "welcome": false,
-      "signup": true,
+      "signup": false,
       "login": false,
       "logout": true,
       "home": true,
       "users": true,
       "questions": true
+    }
+  ],
+  "tickets": [
+    {
+      "id": 0,
+      "content": "bla bla bla",
+      "ownerId": 1
+    },
+    {
+      "id": 1,
+      "content": "bla bla bla",
+      "ownerId": 1
+    },
+    {
+      "id": 2,
+      "content": "bla bla bla",
+      "ownerId": 2
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "client1",
+      "ticketId": 0
+    },
+    {
+      "id": 2,
+      "name": "client2",
+      "ticketId": 2
     }
   ]
 }
