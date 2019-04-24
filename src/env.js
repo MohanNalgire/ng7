@@ -1,4 +1,21 @@
 (function (window) {
+/**
+ *    Created by      :
+ *    Created on      :
+ *    Modified by     :
+ *    Modified on     :
+ *
+ *    @reason         :
+ *                      Limitation 1: Every environment requires a separate build
+ *                      Limitation 2: The application config is part of the application code
+ *                      Limitation 3: Not flexible enough for dynamic cloud solutions
+ *    @reference      :
+ *                      https://www.jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/
+ *                      https://12factor.net/
+ *
+ *
+ *
+ */
   window.__env = window.__env || {};
   // API url
   window.__env.apiUrl = 'http://dev.your-api.com';
