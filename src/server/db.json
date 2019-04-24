@@ -258,5 +258,34 @@
       "name": "client2",
       "ticketId": 2
     }
+  ],
+  "env": [
+     {
+      "title":"prod",
+      "header": "test header prod",
+      "user": "test user prod",
+      "admin": "test admin prod",
+      "login": "test login prod"
+    },
+    {
+      "title":"test",
+      "header": "test header test",
+      "user": "test user test",
+      "admin": "test admin test",
+      "login": "test login test"
+    },
+     {"title":"stag",
+      "header": "test header",
+      "user": "test user",
+      "admin": "test admin",
+      "login": "test login"
+    },
+     {
+       "title":"dev",
+      "header": "test header",
+      "user": "test user",
+      "admin": "test admin",
+      "login": "test login"
+    }
   ]
 }

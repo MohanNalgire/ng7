@@ -24,48 +24,78 @@
   }
   */
 
-  prod = [];
-  test = [];
-  stag = [];;
-  dev= [1, 2, 3, 4, 5, 6, 7, 8];
+  var prod = [];
+  var test = [];
+  var stag = [];
+  var dev = [];
 
-  window.__env.production = [];
-  window.__env.testing = [];
-  window.__env.staging = [];;
-  window.__env.development = [];
+  fetch('http://localhost:3000/env')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      myJson.forEach(element => {
+        switch (true) {
+          case (element.title == 'prod'):
+            prod = element;
+            break;
+          case (element.title == 'test'):
+            test = element;
+            break;
+          case (element.title == 'stag'):
+            stag = element;
+            break;
+          case (element.title == 'dev'):
+            dev = element;
+            break;
+          default:
+            dev = element;
+        }
+      });
 
-  var serverDetails = window.location;
-  var hostDetails = serverDetails.hostname;
-  var port =serverDetails.port;
-  var protocol=serverDetails.protocol;
+      window.__env.production = [];
+      window.__env.testing = [];
+      window.__env.staging = [];;
+      window.__env.development = [];
 
-  switch (hostDetails) {
-    case "production":
-      if (hostDetails && port === '8000' && protocol==='http') {
-        window.__env.production = prod;
-      }
-      break;
-    case "testing":
-      if (hostDetails && port === '8000' && protocol==='http') {
-        window.__env.testing = test;
-      }
-      break;
-    case "staging":
-      if (hostDetails && port === '8000' && protocol==='http') {
-        window.__env.staging = stag;
-      }
-      break;
-    case "localhost"://development
-      if (hostDetails && port ==='4200') {
-        window.__env.development = dev;
-      }
-      break;
-    default:
-      if (hostDetails && port === '4200') {
-        window.__env.development = dev;
+      var serverDetails = window.location;
+      var hostDetails = serverDetails.hostname;
+      var port = serverDetails.port;
+      var protocol = serverDetails.protocol;
+
+      switch (hostDetails) {
+        case "production":
+          if (hostDetails && port === '8000' && protocol === 'http') {
+            window.__env.production = prod;
+          }
+          break;
+        case "testing":
+          if (hostDetails && port === '8000' && protocol === 'http') {
+            window.__env.testing = test;
+          }
+          break;
+        case "staging":
+          if (hostDetails && port === '8000' && protocol === 'http') {
+            window.__env.staging = stag;
+          }
+          break;
+        case "localhost": //development
+          if (hostDetails && port === '4200') {
+            window.__env.development = dev;
+          }
+          break;
+        default:
+          if (hostDetails && port === '4200') {
+            window.__env.development = dev;
+          }
+
       }
 
-  }
 
-  console.log('window',serverDetails, window.__env);
+
+    })
+    .catch(error => console.error(error));
+
+    console.log('window', window.__env);
+
 }(this));

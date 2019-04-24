@@ -31,7 +31,7 @@
               "node_modules/primeng/resources/themes/darkness/theme.css"
             ],
             "scripts": [
-              "./src/env.js"
+
             ],
             "es5BrowserSupport": true
           },
