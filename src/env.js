@@ -33,7 +33,6 @@ var hostDetails=serverDetails.hostname;
 switch(hostDetails){
     case  "production":
         if(hostDetails && port===8000){
-
         }
     break;
     case "testing":break;
@@ -42,4 +41,5 @@ switch(hostDetails){
     default: null;
 }
 
+console.log('window',window);
   }(this));
