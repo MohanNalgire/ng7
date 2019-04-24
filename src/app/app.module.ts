@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { EnvServiceProvider } from './env.service.provider';
 
 
 
@@ -21,7 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
   ],
   providers: [
-
+    EnvServiceProvider
   ],
   bootstrap: [AppComponent],
 

@@ -30,10 +30,10 @@ export class HeaderComponent implements OnInit {
         if (this.currentPage) {
           let urlSplit = this.currentPage.split('/');
           let pageName;
-          if (urlSplit[1] && urlSplit[1]!=='') {
+          if (urlSplit[1] && urlSplit[1] !== '') {
             pageName = `?title=${urlSplit[1]}`;
           } else {
-            pageName = `?title=${this.router.url.replace('/','')}`;
+            pageName = `?title=${this.router.url.replace('/', '')}`;
           }
 
           this.visibleMenu = this.headerService.getMenuByUrl(pageName)
@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
             );
         }
       }
-      });
+    });
   }
 
 
