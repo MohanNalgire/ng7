@@ -25,3 +25,53 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+
+
+
+
+
+
+
+
+# What is used?
+
+## Module Base architecture.
+
+## Lazy loading module
+
+## Dynamic Environment settings
+
+## Interceptor on each service.
+### 1   Interceptor on requiest handling
+### 2   Interceptor on response handling
+
+## Fake json server -> json-server
+
+## RXJs
+### Reference :
+    1   https://www.learnrxjs.io/
+
+
+## NgRx Store for state management
+### Reference :
+    1   https://ngrx.io/
+    2   https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/
+
+## UI components
+### Reference :
+    1   https://www.primefaces.org/primeng/#/
+
+## User defined factory function and constatns.
+
+## SEO friendly application
+### Reference :
+    1   https://www.concretepage.com/angular/angular-meta-service-for-meta-tags
+    2   https://angular.io/api/platform-browser/MetaDefinition
+    3   https://angular.io/api/platform-browser/Meta
+    4   https://alligator.io/angular/meta-tags/
+
+
+

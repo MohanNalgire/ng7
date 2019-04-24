@@ -36,7 +36,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 const routes: Routes = [
   {
     path:'app',
-    component:AppComponent
+    component:AppComponent,
+    data: {
+      title: 'App',
+      description:'Description Meta Tag Content',
+      ogUrl: 'your og url'
+    }
   },
   {
     path:'welcome',
