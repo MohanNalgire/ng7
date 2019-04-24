@@ -262,10 +262,10 @@
   "env": [
      {
       "title":"prod",
-      "header": "test header prod",
-      "user": "test user prod",
-      "admin": "test admin prod",
-      "login": "test login prod"
+      "header": "prod header prod",
+      "user": "prod user prod",
+      "admin": "prod admin prod",
+      "login": "prod login prod"
     },
     {
       "title":"test",
@@ -275,17 +275,17 @@
       "login": "test login test"
     },
      {"title":"stag",
-      "header": "test header",
-      "user": "test user",
-      "admin": "test admin",
-      "login": "test login"
+      "header": "stag header",
+      "user": "stag user",
+      "admin": "stag admin",
+      "login": "stag login"
     },
      {
        "title":"dev",
-      "header": "test header",
-      "user": "test user",
-      "admin": "test admin",
-      "login": "test login"
+      "header": "dev header",
+      "user": "dev user",
+      "admin": "dev admin",
+      "login": "dev login"
     }
   ]
 }

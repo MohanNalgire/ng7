@@ -24,23 +24,6 @@
   // Setting this to false will disable console output
   window.__env.enableDebug = true;
 
-
-
-  /*
-  {
-    "href": "http://127.0.0.1:5500/home",
-    "ancestorOrigins": {},
-    "origin": "http://127.0.0.1:5500",
-    "protocol": "http:",
-    "host": "127.0.0.1:5500",
-    "hostname": "127.0.0.1",
-    "port": "5500",
-    "pathname": "/home",
-    "search": "",
-    "hash": ""
-  }
-  */
-
   var prod = [];
   var test = [];
   var stag = [];
