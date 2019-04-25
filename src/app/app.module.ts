@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { EnvServiceProvider } from './env.service.provider';
+import { SeoService } from './common/services/seo.service';
 
 
 
@@ -22,7 +23,8 @@ import { EnvServiceProvider } from './env.service.provider';
     AppRoutingModule,
   ],
   providers: [
-    EnvServiceProvider
+    EnvServiceProvider,
+    SeoService
   ],
   bootstrap: [AppComponent],
 

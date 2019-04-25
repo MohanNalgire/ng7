@@ -97,7 +97,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes,{useHash: true}),
     //
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),

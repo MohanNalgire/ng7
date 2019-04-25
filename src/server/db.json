@@ -289,11 +289,23 @@
       "login": "dev login"
     }
   ],
-
   "pageMetaTags": {
-    "welcome":{
+    "welcome": {
       "title": "Welcome Page",
       "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        }
+      ]
+    },
+    "home": {
+      "title": "Home Page",
+      "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        }
       ]
     },
     "login": {

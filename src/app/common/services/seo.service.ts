@@ -8,22 +8,20 @@ import { EnvService } from '../../env.service';
 export class SeoService {
   private urlPageMetaApi: string = 'http://localhost:3000/pageMetaTags';
 
-  constructor(private meta: Meta, private title: Title, private _http: HttpClient,private env:EnvService) {
+  constructor(private meta: Meta, private title: Title, private _http: HttpClient, private env: EnvService) {
     // console.log('env',env);
   }
 
-  setPagetitleMetaTag(moduleName){
+  setPagetitleMetaTag(moduleName) {
     this._http.get(this.urlPageMetaApi).subscribe(
       data => {
         if (data) {
           let moduleMetaData = data[moduleName];
-          if(moduleMetaData){
+          if (moduleMetaData.hasOwnProperty('title') || moduleMetaData.hasOwnProperty('metaTags')) {
             this.title.setTitle(moduleMetaData.title);
-          this.meta.addTags(moduleMetaData[moduleName]);
+            this.meta.addTags(moduleMetaData.metaTags);
           }
         }
-
-
       },
       error => {
         console.error('metaTag service', error);
