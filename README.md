@@ -43,6 +43,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Lazy loading module
 
 ## Dynamic Environment settings
+### Reference :
+    1   https://www.jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/
 
 ## Interceptor on each service.
 ### 1   Interceptor on requiest handling

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from '../common/services/seo.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private seoMeta:SeoService) {
+    seoMeta.setPagetitleMetaTag('welcome');
+  }
 
   ngOnInit() {
   }

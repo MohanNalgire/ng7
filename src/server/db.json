@@ -260,32 +260,129 @@
     }
   ],
   "env": [
-     {
-      "title":"prod",
+    {
+      "title": "prod",
       "header": "prod header prod",
       "user": "prod user prod",
       "admin": "prod admin prod",
       "login": "prod login prod"
     },
     {
-      "title":"test",
+      "title": "test",
       "header": "test header test",
       "user": "test user test",
       "admin": "test admin test",
       "login": "test login test"
     },
-     {"title":"stag",
+    {
+      "title": "stag",
       "header": "stag header",
       "user": "stag user",
       "admin": "stag admin",
       "login": "stag login"
     },
-     {
-       "title":"dev",
+    {
+      "title": "dev",
       "header": "dev header",
       "user": "dev user",
       "admin": "dev admin",
       "login": "dev login"
     }
-  ]
+  ],
+
+  "pageMetaTags": {
+    "welcome":{
+      "title": "Welcome Page",
+      "metaTags": [
+      ]
+    },
+    "login": {
+      "title": "login Page",
+      "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        },
+        {
+          "name": "robots",
+          "content": "INDEX, FOLLOW"
+        },
+        {
+          "name": "author",
+          "content": "ABCD"
+        },
+        {
+          "name": "keywords",
+          "content": "TypeScript, Angular"
+        },
+        {
+          "name": "date",
+          "content": "2018-06-02', scheme: 'YYYY-MM-DD'"
+        },
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "httpEquiv": "Content-Type",
+          "content": "text/html"
+        },
+        {
+          "property": "og:title",
+          "content": "My Text"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        }
+      ]
+    },
+    "user": {
+      "title": "User page",
+      "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        },
+        {
+          "name": "robots",
+          "content": "INDEX, FOLLOW"
+        },
+        {
+          "name": "author",
+          "content": "ABCD"
+        },
+        {
+          "name": "keywords",
+          "content": "TypeScript, Angular"
+        },
+        {
+          "name": "date",
+          "content": "2018-06-02', scheme: 'YYYY-MM-DD'"
+        },
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "httpEquiv": "Content-Type",
+          "content": "text/html"
+        },
+        {
+          "property": "og:title",
+          "content": "My Text"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        }
+      ]
+    }
+  }
 }
