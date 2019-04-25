@@ -45,6 +45,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Dynamic Environment settings
 ### Reference :
     1   https://www.jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/
+    Or
+    2   https://juristr.com/blog/2018/01/ng-app-runtime-config/#runtime-configuration
+    3   https://www.tektutorialshub.com/angular/angular-runtime-configuration/#loading-the-runtime-configuration
+
 
 ## Interceptor on each service.
 ### 1   Interceptor on requiest handling
