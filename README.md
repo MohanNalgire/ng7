@@ -38,11 +38,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # What is used?
 
-## Module Base architecture.
+## 1    Module Base architecture.
 
-## Lazy loading module
+## 2    Lazy loading module
 
-## Dynamic Environment settings
+## 3    Dynamic Environment settings
 ### Reference :
     1   https://www.jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/
     Or
@@ -50,29 +50,29 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     3   https://www.tektutorialshub.com/angular/angular-runtime-configuration/#loading-the-runtime-configuration
 
 
-## Interceptor on each service.
+## 4    Interceptor on each service.
 ### 1   Interceptor on requiest handling
 ### 2   Interceptor on response handling
 
-## Fake json server -> json-server
+## 5    Fake json server -> json-server
 
-## RXJs
+## 6    RXJs
 ### Reference :
     1   https://www.learnrxjs.io/
 
 
-## NgRx Store for state management
+## 7    State management(NgRx Store)
 ### Reference :
     1   https://ngrx.io/
     2   https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/
 
-## UI components
+## 8    UI components
 ### Reference :
     1   https://www.primefaces.org/primeng/#/
 
-## User defined factory function and constatns.
+## 9    Providers(User defined factory function and constatns)
 
-## SEO friendly application
+## 10   SEO friendly application
 ### Reference :
     1   https://www.concretepage.com/angular/angular-meta-service-for-meta-tags
     2   https://angular.io/api/platform-browser/MetaDefinition

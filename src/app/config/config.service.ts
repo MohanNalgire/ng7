@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ConfigService {
   private appConfig;
-
+  private configEnv='http://localhost:3000/env';
   constructor(private http: HttpClient) { }
 
   loadAppConfig() {
-    return this.http.get('http://localhost:3000/env')
+    return this.http.get(this.configEnv)
       .toPromise()
       .then(data => {
         console.log('data server meta tags',data);
