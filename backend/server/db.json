@@ -1,0 +1,407 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "nagaraj",
+      "password": "biradar",
+      "token": "typicode"
+    },
+    {
+      "id": 2,
+      "username": "mohan",
+      "password": "test@12345",
+      "token": "typicode"
+    },
+    {
+      "id": 3,
+      "username": "santosh",
+      "password": "biradar",
+      "token": "typicode"
+    },
+    {
+      "id": 4,
+      "username": "rohit",
+      "password": "biradar",
+      "token": "typicode"
+    },
+    {
+      "id": 5,
+      "username": "raj",
+      "password": "biradar",
+      "token": "typicode"
+    },
+    {
+      "id": 6,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 7,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 8,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    },
+    {
+      "id": 9,
+      "username": "nagaraj",
+      "password": "12345",
+      "firstName": "Nagaraj",
+      "lastName": "Birajdar",
+      "token": "qwerfsfsfs"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Test on question",
+      "techIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "question": "Test on question",
+      "techIds": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "question": "Test on question",
+      "techIds": [
+        3,
+        4,
+        5
+      ],
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "question": "Test on question",
+      "techIds": [
+        4,
+        5
+      ],
+      "userId": 5
+    }
+  ],
+  "technologies": [
+    {
+      "id": 1,
+      "name": "Python"
+    },
+    {
+      "id": 2,
+      "name": "Java"
+    },
+    {
+      "id": 3,
+      "name": "PHP"
+    },
+    {
+      "id": 4,
+      "name": "JavaScript"
+    },
+    {
+      "id": 5,
+      "name": "Objective-C"
+    },
+    {
+      "id": 6,
+      "name": "Ruby"
+    },
+    {
+      "id": 7,
+      "name": "Perl"
+    },
+    {
+      "id": 8,
+      "name": "C"
+    },
+    {
+      "id": 9,
+      "name": "C++"
+    },
+    {
+      "id": 10,
+      "name": "C#"
+    }
+  ],
+  "votes": [],
+  "answers": [
+    {
+      "id": 1,
+      "questionId": 1,
+      "answer": ""
+    },
+    {
+      "id": 2,
+      "questionId": 1,
+      "answer": ""
+    }
+  ],
+  "headerMenu": [
+    {
+      "id": 1,
+      "title": "welcome",
+      "welcome": false,
+      "signup": true,
+      "login": true,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id": 2,
+      "title": "login",
+      "welcome": false,
+      "signup": true,
+      "login": false,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id": 3,
+      "title": "logout",
+      "welcome": false,
+      "signup": true,
+      "login": true,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id": 4,
+      "title": "signup",
+      "welcome": false,
+      "signup": false,
+      "login": false,
+      "logout": false,
+      "home": false,
+      "users": false,
+      "questions": false
+    },
+    {
+      "id": 5,
+      "title": "home",
+      "welcome": false,
+      "signup": false,
+      "login": false,
+      "logout": true,
+      "home": true,
+      "users": true,
+      "questions": true
+    },
+    {
+      "id": 6,
+      "title": "questions",
+      "welcome": false,
+      "signup": false,
+      "login": false,
+      "logout": true,
+      "home": true,
+      "users": true,
+      "questions": true
+    }
+  ],
+  "tickets": [
+    {
+      "id": 0,
+      "content": "bla bla bla",
+      "ownerId": 1
+    },
+    {
+      "id": 1,
+      "content": "bla bla bla",
+      "ownerId": 1
+    },
+    {
+      "id": 2,
+      "content": "bla bla bla",
+      "ownerId": 2
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "client1",
+      "ticketId": 0
+    },
+    {
+      "id": 2,
+      "name": "client2",
+      "ticketId": 2
+    }
+  ],
+  "env": [
+    {
+      "title": "prod",
+      "header":{
+        "url1":{
+
+        },
+        "header":{
+
+        }
+      },
+      "user": "prod user prod",
+      "admin": "prod admin prod",
+      "login": "prod login prod"
+    },
+    {
+      "title": "test",
+      "header": "test header test",
+      "user": "test user test",
+      "admin": "test admin test",
+      "login": "test login test"
+    },
+    {
+      "title": "stag",
+      "header": "stag header",
+      "user": "stag user",
+      "admin": "stag admin",
+      "login": "stag login"
+    },
+    {
+      "title": "dev",
+      "header": "dev header",
+      "user": "dev user",
+      "admin": "dev admin",
+      "login": "dev login"
+    }
+  ],
+  "pageMetaTags": {
+    "welcome": {
+      "title": "Welcome Page",
+      "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        }
+      ]
+    },
+    "home": {
+      "title": "Home Page",
+      "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        }
+      ]
+    },
+    "login": {
+      "title": "login Page",
+      "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        },
+        {
+          "name": "robots",
+          "content": "INDEX, FOLLOW"
+        },
+        {
+          "name": "author",
+          "content": "ABCD"
+        },
+        {
+          "name": "keywords",
+          "content": "TypeScript, Angular"
+        },
+        {
+          "name": "date",
+          "content": "2018-06-02', scheme: 'YYYY-MM-DD'"
+        },
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "httpEquiv": "Content-Type",
+          "content": "text/html"
+        },
+        {
+          "property": "og:title",
+          "content": "My Text"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        }
+      ]
+    },
+    "user": {
+      "title": "User page",
+      "metaTags": [
+        {
+          "name": "description",
+          "content": "'Title and Meta tags examples"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        },
+        {
+          "name": "robots",
+          "content": "INDEX, FOLLOW"
+        },
+        {
+          "name": "author",
+          "content": "ABCD"
+        },
+        {
+          "name": "keywords",
+          "content": "TypeScript, Angular"
+        },
+        {
+          "name": "date",
+          "content": "2018-06-02', scheme: 'YYYY-MM-DD'"
+        },
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "httpEquiv": "Content-Type",
+          "content": "text/html"
+        },
+        {
+          "property": "og:title",
+          "content": "My Text"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        }
+      ]
+    }
+  }
+}
