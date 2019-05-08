@@ -20,7 +20,6 @@ export class HttpConfigInterceptor implements HttpInterceptor {
           return event;
       }),
       catchError((error: HttpErrorResponse)=>{
-        console.error("respone error",error);
         return throwError(error);
       })
 

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER, ErrorHandler } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -9,6 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { EnvServiceProvider } from './env.service.provider';
 import { SeoService } from './common/services/seo.service';
 import { ConfigService } from './config/config.service';
+
+import { ErrorComponent } from './common/component/error/error.component';
+
 
 
 const appInitializerFn = (appConfig: ConfigService) => {
@@ -20,7 +23,9 @@ const appInitializerFn = (appConfig: ConfigService) => {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorComponent,
+
   ],
   imports: [
     BrowserModule,

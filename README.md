@@ -79,5 +79,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     3   https://angular.io/api/platform-browser/Meta
     4   https://alligator.io/angular/meta-tags/
 
+##  11  Toastr
+### Reference :
+    1   https://scttcper.github.io/ngx-toastr/
+    2   https://www.jsdelivr.com/package/npm/ngx-toastr
+    3   https://stackblitz.com/edit/ngx-toastr-custom?file=app%2Fcustom-toast%2Fcustom-toast.component.ts
 
 

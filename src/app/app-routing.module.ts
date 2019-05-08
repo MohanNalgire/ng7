@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginModule } from './login/login.module'
 import { UserModule } from './user/user.module';
@@ -6,8 +6,8 @@ import { AdminModule } from './admin/admin.module';
 import { QuestionsModule } from './questions/questions.module';
 //Components
 
-import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
-import { HomeComponent } from './home/home.component';
+import { FileNotFoundComponent } from './common/component/file-not-found/file-not-found.component';
+import { HomeComponent } from './common/component/home/home.component';
 
 //Services
 import { QuestionsService } from './questions/questions.service';
@@ -22,16 +22,21 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { environment } from 'src/environments/environment.prod';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './common/component/header/header.component';
+import { FooterComponent } from './common/component/footer/footer.component';
 import { ConfigComponent } from './config/config.component';
-import { MainpageComponent } from './mainpage/mainpage.component';
+import { MainpageComponent } from './common/component/mainpage/mainpage.component';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from './common/component/welcome/welcome.component';
 import { AuthGuard } from './common/guards/auth.guard';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './common/component/sidebar/sidebar.component';
+import { ErrorComponent } from './common/component/error/error.component';
+import { GlobalErrorHandlerService } from './common/services/global-error-handler.service';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ToastComponent } from './common/component/toast/toast.component';
 
 const routes: Routes = [
   {
@@ -55,6 +60,10 @@ const routes: Routes = [
   {
     path: 'filenotfound',
     component: FileNotFoundComponent
+  },
+  {
+    path:'error',
+    component:ErrorComponent
   },
   {
     path: 'login',
@@ -92,11 +101,15 @@ const routes: Routes = [
     FileNotFoundComponent,
     HomeComponent,
     WelcomeComponent,
-    SidebarComponent
-
+    SidebarComponent,
+    ToastComponent
   ],
   imports: [
     CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot({
+      toastComponent: ToastComponent, // added custom toast!
+    }), // ToastrModule added
     RouterModule.forRoot(routes,{useHash: true}),
     //
     StoreModule.forRoot({}),
@@ -113,6 +126,7 @@ const routes: Routes = [
     HeaderComponent,
     MainpageComponent,
     FooterComponent,
+    //ToastComponent
   ],
   providers: [
     QuestionsService,
@@ -121,6 +135,9 @@ const routes: Routes = [
       useClass: HttpConfigInterceptor,
       multi: true
     },
-  ]
+    {provide: ErrorHandler, useClass: GlobalErrorHandlerService},
+
+  ],
+  entryComponents: [ToastComponent],
 })
 export class AppRoutingModule { }

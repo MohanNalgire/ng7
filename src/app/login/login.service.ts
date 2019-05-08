@@ -19,7 +19,7 @@ export class LoginService {
 
 
   allUsers: Array<User>;
-  private apiURL = 'http://localhost:3000/users'
+  private apiURL = 'http://localhost:3000/user'
 
   objBody = {
     "id": 0,
