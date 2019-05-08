@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule }    from '@angular/common/http';
 import { UserRoutingModule } from './user-routing.module';
@@ -30,10 +30,17 @@ import { TableModule } from 'primeng/table';
     CommonModule,
     FormsModule,
     TableModule,
+
     UserRoutingModule,
     HttpClientModule,
     StoreModule.forFeature('users',UserReducer),
     EffectsModule.forFeature([userEffects])
+  ],
+  exports:[
+    UserComponent,
+    UserAddComponent,
+    UserEditComponent,
+    UserListComponent
   ],
   providers:[UserService],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

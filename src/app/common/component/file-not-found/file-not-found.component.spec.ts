@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FileNotFoundComponent } from './file-not-found.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('FileNotFoundComponent', () => {
   let component: FileNotFoundComponent;
@@ -8,7 +9,11 @@ describe('FileNotFoundComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FileNotFoundComponent ]
+      declarations: [ FileNotFoundComponent ],
+      imports:[
+        RouterTestingModule
+      ]
+
     })
     .compileComponents();
   }));

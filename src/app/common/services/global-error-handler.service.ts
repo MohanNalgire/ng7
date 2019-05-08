@@ -1,4 +1,4 @@
-import { Injectable, ErrorHandler, Injector } from '@angular/core';
+import { Injectable, ErrorHandler, Injector, SkipSelf } from '@angular/core';
 import { Router } from "@angular/router";
 import { UNAUTHORIZED, BAD_REQUEST, FORBIDDEN, NOT_FOUND } from "http-status-codes";
 import { ToastrService } from 'ngx-toastr';
@@ -10,7 +10,7 @@ export class GlobalErrorHandlerService implements ErrorHandler {
   static readonly REFRESH_PAGE_ON_TOAST_CLICK_MESSAGE: string = "An error occurred: Please click this message to refresh";
   static readonly DEFAULT_ERROR_TITLE: string = "Something went wrong";
 
-  constructor(private injector: Injector, private toastrService: ToastrService) { }
+  constructor(private injector: Injector,@SkipSelf() private toastrService: ToastrService) { }
 
   handleError(error: any): void {
 
@@ -38,7 +38,7 @@ export class GlobalErrorHandlerService implements ErrorHandler {
 
 
   private showError(message: string) {
-    debugger
+
     this.toastrService.error(message, GlobalErrorHandlerService.DEFAULT_ERROR_TITLE, {
       timeOut: 0,
       extendedTimeOut: 100,

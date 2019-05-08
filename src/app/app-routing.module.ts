@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginModule } from './login/login.module'
 import { UserModule } from './user/user.module';
@@ -122,11 +122,18 @@ const routes: Routes = [
     QuestionsModule,
   ],
   exports: [
-    RouterModule,
+    ConfigComponent,
     HeaderComponent,
-    MainpageComponent,
     FooterComponent,
-    //ToastComponent
+    MainpageComponent,
+    FileNotFoundComponent,
+    HomeComponent,
+    WelcomeComponent,
+    SidebarComponent,
+    ToastComponent,
+
+    RouterModule,
+
   ],
   providers: [
     QuestionsService,
@@ -139,5 +146,6 @@ const routes: Routes = [
 
   ],
   entryComponents: [ToastComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })
 export class AppRoutingModule { }

@@ -52,5 +52,6 @@ const appInitializerFn = (appConfig: ConfigService) => {
   ],
   bootstrap: [AppComponent],
 
+
 })
 export class AppModule { }
