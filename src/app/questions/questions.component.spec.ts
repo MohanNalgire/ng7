@@ -10,7 +10,7 @@ describe('QuestionsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ QuestionsComponent ],
-      imports:[HttpClientTestingModule]
+      imports:[HttpClientTestingModule  ]
     })
     .compileComponents();
   }));
