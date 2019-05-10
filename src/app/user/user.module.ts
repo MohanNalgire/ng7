@@ -43,6 +43,6 @@ import { TableModule } from 'primeng/table';
     UserListComponent
   ],
   providers:[UserService],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })
 export class UserModule { }

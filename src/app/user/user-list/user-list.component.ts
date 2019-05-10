@@ -14,6 +14,7 @@ export class UserListComponent implements OnInit {
   public usersList: any;
   cars: User[];
   cols: any[];
+  columns:any;
 
   constructor(private _store: Store<any>) { }
 

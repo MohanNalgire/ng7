@@ -35,8 +35,8 @@ import { ErrorComponent } from './common/component/error/error.component';
 import { GlobalErrorHandlerService } from './common/services/global-error-handler.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
-import { ToastComponent } from './common/component/toast/toast.component';
+
+
 
 const routes: Routes = [
   {
@@ -101,15 +101,11 @@ const routes: Routes = [
     FileNotFoundComponent,
     HomeComponent,
     WelcomeComponent,
-    SidebarComponent,
-    ToastComponent
+    SidebarComponent
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot({
-      toastComponent: ToastComponent, // added custom toast!
-    }), // ToastrModule added
     RouterModule.forRoot(routes,{useHash: true}),
     //
     StoreModule.forRoot({}),
@@ -130,7 +126,7 @@ const routes: Routes = [
     HomeComponent,
     WelcomeComponent,
     SidebarComponent,
-    ToastComponent,
+
 
     RouterModule,
 
@@ -145,7 +141,7 @@ const routes: Routes = [
     {provide: ErrorHandler, useClass: GlobalErrorHandlerService},
 
   ],
-  entryComponents: [ToastComponent],
+
   schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })
 export class AppRoutingModule { }

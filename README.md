@@ -44,10 +44,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 3    Dynamic Environment settings
 ### Reference :
-    1   https://www.jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/
+1   [Demo example](https://www.jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/)
     Or
-    2   https://juristr.com/blog/2018/01/ng-app-runtime-config/#runtime-configuration
-    3   https://www.tektutorialshub.com/angular/angular-runtime-configuration/#loading-the-runtime-configuration
+2   [Runtime configuration Demo1](https://juristr.com/blog/2018/01/ng-app-runtime-config/#runtime-configuration)
+3   [Runtime configuration Demo1](https://www.tektutorialshub.com/angular/angular-runtime-configuration/#loading-the-runtime-configuration)
 
 
 ## 4    Interceptor on each service.
@@ -58,31 +58,52 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 6    RXJs
 ### Reference :
-    1   https://www.learnrxjs.io/
+1   [RxJS guide](https://www.learnrxjs.io/)
 
 
 ## 7    State management(NgRx Store)
 ### Reference :
-    1   https://ngrx.io/
-    2   https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/
+1   [NgRx guide](https://ngrx.io/)
+2   [Angular university](https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/)
 
 ## 8    UI components
 ### Reference :
-    1   https://www.primefaces.org/primeng/#/
+1   [Prime ng and prime faces](https://www.primefaces.org/primeng/#/)
 
 ## 9    Providers(User defined factory function and constatns)
 
 ## 10   SEO friendly application
 ### Reference :
-    1   https://www.concretepage.com/angular/angular-meta-service-for-meta-tags
-    2   https://angular.io/api/platform-browser/MetaDefinition
-    3   https://angular.io/api/platform-browser/Meta
-    4   https://alligator.io/angular/meta-tags/
+1   [Concreatepage site](https://www.concretepage.com/angular/angular-meta-service-for-meta-tags)
+2   [Angular Api guide](https://angular.io/api/platform-browser/MetaDefinition)
+3   [Angular Api Meta tag](https://angular.io/api/platform-browser/Meta)
+4   [Alligator site](https://alligator.io/angular/meta-tags/)
 
 ##  11  Toastr
 ### Reference :
-    1   https://scttcper.github.io/ngx-toastr/
-    2   https://www.jsdelivr.com/package/npm/ngx-toastr
-    3   https://stackblitz.com/edit/ngx-toastr-custom?file=app%2Fcustom-toast%2Fcustom-toast.component.ts
+1   [ngx-toastr](https://scttcper.github.io/ngx-toastr/)
+2   [ngx-toastr example](https://www.jsdelivr.com/package/npm/ngx-toastr)
+3   [ngx-toastr custom](https://stackblitz.com/edit/ngx-toastr-custom?file=app%2Fcustom-toast%2Fcustom-toast.component.ts)
+
+
+##  12  Testing
+    Testing types
+1   isolated testing
+        `An isolated test only focuses on the component’s class.`
+        -   want to test its (complex) logic above all, we don’t want to focus on its template.
+
+
+2   shallow testing
+        `The shadow test focuses on the component’s class and its template, without its dependencies by mocking them.`
+        -   want to test its own template with the class logic. By doing so, we will mock all        the other components that are part of the template.
+
+3   integrated testing
+    `An integrated test will test the component and its dependencies as a whole.`
+    -   want to test its class logic, its template and all its        dependencies.
+
+
+### Reference   :
+1   [Angular testing](https://medium.com/@bencabanes/angular-component-testing-with-examples-7c52b2b7035e)
+
 
 
