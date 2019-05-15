@@ -11,7 +11,7 @@ import { SeoService } from './common/services/seo.service';
 import { ConfigService } from './config/config.service';
 
 import { ErrorComponent } from './common/component/error/error.component';
-
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 
 const appInitializerFn = (appConfig: ConfigService) => {
@@ -31,6 +31,12 @@ const appInitializerFn = (appConfig: ConfigService) => {
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: 'http://localhost:3000/logger',
+      level: NgxLoggerLevel.TRACE,
+      serverLogLevel: NgxLoggerLevel.ERROR,
+      disableConsoleLogging: false
+    })
   ],
   providers: [
     /**

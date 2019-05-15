@@ -1,4 +1,123 @@
 {
+  "logger": [
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T06:29:51.099Z",
+      "fileName": "main.js",
+      "lineNumber": "500",
+      "id": 1
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T06:35:02.961Z",
+      "fileName": "main.js",
+      "lineNumber": "503",
+      "id": 2
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T06:35:05.917Z",
+      "fileName": "main.js",
+      "lineNumber": "503",
+      "id": 3
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T06:35:14.596Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 4
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T06:35:16.084Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 5
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T08:28:15.914Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 6
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T11:44:48.625Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 7
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T11:47:21.380Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 8
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T11:47:34.506Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 9
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T11:54:19.178Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 10
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T11:54:23.913Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 11
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T11:55:39.472Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 12
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T11:56:00.777Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 13
+    }
+  ],
   "users": [
     {
       "id": 1,
@@ -262,13 +381,9 @@
   "env": [
     {
       "title": "prod",
-      "header":{
-        "url1":{
-
-        },
-        "header":{
-
-        }
+      "header": {
+        "url1": {},
+        "header": {}
       },
       "user": "prod user prod",
       "admin": "prod admin prod",

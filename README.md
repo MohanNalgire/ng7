@@ -51,6 +51,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## 4    Interceptor on each service.
+###     Features
+1       URL manipulation
+2       Response conversion
+3       Loader effect
+4       Headers management
+5       Notifications
+6       Errors
+7       Profiling (logs, time logs )
+8       Fake backend
+9       Caching
+10      Authentication(Api checking for authentication)
+        1       Add bearer token
+        2       Refresh Token
+        3       Redirect to the login page
+### Reference :
+[Top 10 ways to use Interceptors in Angular](https://blog.angularindepth.com/top-10-ways-to-use-interceptors-in-angular-db450f8a62d6)
 ### 1   Interceptor on requiest handling
 ### 2   Interceptor on response handling
 
@@ -107,3 +123,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
+##  13  Log
+###     Features
+1       Environment Specific Logging in Angular
+2       Pretty printing to the console
+3       Enable logging based on the level specified
+4       Control log level based on the current environment
+5       Send log messages to server via HTTP for centralised logging
+6       Indicates log location and line number
+### Reference   :
+1       [Angular log](https://www.codemag.com/Article/1711021/Logging-in-Angular-Applications)
+2       [Ngx logger example1](https://onthecode.co.uk/angular-logging-made-easy-with-ngx-logger/)
+3       [Ngx logger example2](https://medium.com/@ahmedhamedTN/enable-disable-angular-logging-based-on-production-environment-using-ngxlogger-dee531fb8374)
