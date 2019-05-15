@@ -116,6 +116,15 @@
       "fileName": "main.js",
       "lineNumber": "504",
       "id": 13
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-15T12:39:55.092Z",
+      "fileName": "main.js",
+      "lineNumber": "504",
+      "id": 14
     }
   ],
   "users": [
