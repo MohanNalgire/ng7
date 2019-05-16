@@ -34,7 +34,7 @@
     "jquery": "^3.4.1",
     "jwt-decode": "^2.2.0",
     "ngx-logger": "^3.3.13",
-    "ngx-toastr": "^10.0.2",
+    "ngx-toastr": "^10.0.4",
     "popper": "^1.0.1",
     "popper.js": "^1.15.0",
     "primeicons": "^1.0.0",

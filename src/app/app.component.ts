@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { SeoService } from './common/services/seo.service';
 import { EnvService } from './env.service';
 import { NGXLogger } from 'ngx-logger';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   title = 'ng7project';
 
 
-  constructor(private seoMeta:SeoService,private env:EnvService,private logger: NGXLogger){
+  constructor(private seoMeta:SeoService,private env:EnvService,private logger: NGXLogger,private toastr: ToastrService){
     seoMeta.setPagetitleMetaTag('login');
     //console.log('env',env);
     /**
@@ -26,5 +27,16 @@ export class AppComponent {
     this.logger.warn("Warning message");
     this.logger.error("Error message");
 
+    /* toaster methoods
+    this.toastr.success('Hello world!', 'Toastr fun!');
+    this.toastr.clear();
+    this.toastr.error();
+    this.toastr.findDuplicate();
+    this.toastr.info();
+    this.toastr.remove();
+    this.toastr.show();
+    this.toastr.success();
+    this.toastr.warning();
+    */
   }
 }
