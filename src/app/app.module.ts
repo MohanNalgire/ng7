@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -13,6 +14,7 @@ import { ConfigService } from './config/config.service';
 import { ErrorComponent } from './common/component/error/error.component';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
+import { ToastrModule } from 'ngx-toastr';
 
 const appInitializerFn = (appConfig: ConfigService) => {
   return () => {
@@ -36,7 +38,8 @@ const appInitializerFn = (appConfig: ConfigService) => {
       level: NgxLoggerLevel.TRACE,
       serverLogLevel: NgxLoggerLevel.ERROR,
       disableConsoleLogging: false
-    })
+    }),
+    ToastrModule.forRoot()
   ],
   providers: [
     /**

@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpConfigInterceptor implements HttpInterceptor {
 
-  constructor() { }
+  constructor(private toastr:ToastrService) { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     /**
@@ -41,6 +42,8 @@ export class HttpConfigInterceptor implements HttpInterceptor {
       catchError((error: HttpErrorResponse)=>{
         if (error.status !== 401) {
           // 401 handled in auth.interceptor
+          this.toastr.error(error.message,error.name,{'disableTimeOut':false});
+
         }
         return throwError(error);
       })
