@@ -30,7 +30,7 @@ const appInitializerFn = (appConfig: ConfigService) => {
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     LoggerModule.forRoot({

@@ -21,7 +21,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { environment } from 'src/environments/environment.prod';
+import { environment } from '../environments/environment';
 import { HeaderComponent } from './common/component/header/header.component';
 import { FooterComponent } from './common/component/footer/footer.component';
 import { ConfigComponent } from './config/config.component';

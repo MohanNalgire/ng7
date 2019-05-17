@@ -38,6 +38,26 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # What is used?
 
+
+## 1    Module Base architecture.
+## 2    Lazy loading module
+## 3    Dynamic Environment settings
+## 4    Interceptor on each service.
+## 5    Fake json server -> json-server
+## 6    RXJs
+## 7    State management(NgRx Store)
+## 8    UI components(PrimeNg)
+## 9    Providers(User defined factory function and constatns)
+## 10   SEO friendly application
+## 11   Toastr
+## 12   Testing
+## 13   Angular Application Log
+## 14   Server-side Rendering (SSR- Angular Universal)
+
+
+
+
+#Details
 ## 1    Module Base architecture.
 
 ## 2    Lazy loading module
@@ -102,7 +122,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3   [ngx-toastr custom](https://stackblitz.com/edit/ngx-toastr-custom?file=app%2Fcustom-toast%2Fcustom-toast.component.ts)
 
 
-##  12  Testing
+## 12  Testing
     Testing types
 1   isolated testing
         `An isolated test only focuses on the component’s class.`
@@ -123,7 +143,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-##  13  Log
+## 13  Angular Application Log
 ###     Features
 1       Environment Specific Logging in Angular
 2       Pretty printing to the console
@@ -135,3 +155,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 1       [Angular log](https://www.codemag.com/Article/1711021/Logging-in-Angular-Applications)
 2       [Ngx logger example1](https://onthecode.co.uk/angular-logging-made-easy-with-ngx-logger/)
 3       [Ngx logger example2](https://medium.com/@ahmedhamedTN/enable-disable-angular-logging-based-on-production-environment-using-ngxlogger-dee531fb8374)
+4       [ngx-logger example3](https://onthecode.co.uk/angular-logging-made-easy-with-ngx-logger/)
+
+
+## 14   Server-side Rendering (SSR- Angular Universal)
+
+
+### Reference   :
+####    How to create server side app
+`ng add @nguniversal/express-engine --clientProject angular.io-example` or
+`npm install --save @angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader @nguniversal/express-engine`
+
+####    How to run
+`npm run build:ssr && npm run serve:ssr`
+1       [Angular Universal: a Complete Practical Guide](https://blog.angular-university.io/angular-universal/)
+2       [Angular Universal Guide](https://angular.io/guide/universal)
+3       [Aligator - Angular Universal](https://alligator.io/angular/angular-universal/)
+4       [HOW TO CREATE AN ANGULAR APPLICATION WITH SERVER-SIDE RENDERING?](https://blog.savoirfairelinux.com/en-ca/2017/angular-app-with-server-side-rendering/)
