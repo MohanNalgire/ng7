@@ -35,6 +35,7 @@ import { ErrorComponent } from './common/component/error/error.component';
 import { GlobalErrorHandlerService } from './common/services/global-error-handler.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SsoAuthService } from './common/services/sso-auth.service';
 
 
 
@@ -106,7 +107,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserAnimationsModule, // required animations module
-    RouterModule.forRoot(routes,{useHash: true}),
+    RouterModule.forRoot(routes,{useHash: false}),
     //
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
@@ -116,6 +117,7 @@ const routes: Routes = [
     UserModule,
     AdminModule,
     QuestionsModule,
+
   ],
   exports: [
     ConfigComponent,
@@ -139,6 +141,7 @@ const routes: Routes = [
       multi: true
     },
     {provide: ErrorHandler, useClass: GlobalErrorHandlerService},
+    SsoAuthService
 
   ],
 

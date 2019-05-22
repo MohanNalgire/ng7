@@ -158,7 +158,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 4       [ngx-logger example3](https://onthecode.co.uk/angular-logging-made-easy-with-ngx-logger/)
 
 
-## 14   Server-side Rendering (SSR- Angular Universal)
+## 14   Server-side Rendering (SSR- Angular Universal) -Working On
 
 
 ### Reference   :
@@ -172,3 +172,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 2       [Angular Universal Guide](https://angular.io/guide/universal)
 3       [Aligator - Angular Universal](https://alligator.io/angular/angular-universal/)
 4       [HOW TO CREATE AN ANGULAR APPLICATION WITH SERVER-SIDE RENDERING?](https://blog.savoirfairelinux.com/en-ca/2017/angular-app-with-server-side-rendering/)
+
+
+## 15 Single sing on
+
+
+
+### Reference   :
+
+1       [Simple single sign on Alligator](https://alligator.io/angular/authentication-auth0/)
+
+
+##      Authentication and authorization protocols Auth0 supports(Identity protocols)
+        Common and popular identity protocols
+        1       OAuth 2.0
+        2       OpenID Connect
+        Enterprise deployments
+        3       SAML
+        4       WS-Fed
+        5       LDAP
+
+
+2       [OAuth 2.0](https://auth0.com/docs/api/authentication?http#login        )
