@@ -124,7 +124,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 12  Testing
     Testing types
-1   isolated testing
+1   isolated testing(Unit testing)
         `An isolated test only focuses on the component’s class.`
         -   want to test its (complex) logic above all, we don’t want to focus on its template.
 
@@ -135,10 +135,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 3   integrated testing
     `An integrated test will test the component and its dependencies as a whole.`
-    -   want to test its class logic, its template and all its        dependencies.
+    -   want to test its class logic, its template and all its dependencies.
 
 
 ### Reference   :
+1   [Angular Unit Testing](https://codecraft.tv/courses/angular/unit-testing/overview/)
 1   [Angular testing](https://medium.com/@bencabanes/angular-component-testing-with-examples-7c52b2b7035e)
 
 
@@ -192,5 +193,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         4       WS-Fed
         5       LDAP
 
-
-2       [OAuth 2.0](https://auth0.com/docs/api/authentication?http#login        )
+1       [auth0.js library documentation](https://auth0.github.io/auth0.js/index.html)
+2       [OAuth 2.0](https://auth0.com/docs/api/authentication?http#login)

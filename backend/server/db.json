@@ -1183,6 +1183,15 @@
       "fileName": "main.js",
       "lineNumber": "510",
       "id": 131
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-05-22T12:41:30.797Z",
+      "fileName": "main.js",
+      "lineNumber": "510",
+      "id": 132
     }
   ],
   "users": [
