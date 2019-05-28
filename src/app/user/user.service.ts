@@ -10,7 +10,6 @@ export class UserService {
   constructor(private _http: HttpClient) { }
 
   getUsers() {
-    console.log(" getList called ");
     return this._http.get(this.userApiUrl);
   }
   getUser(userId){

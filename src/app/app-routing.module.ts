@@ -41,30 +41,30 @@ import { SsoAuthService } from './common/services/sso-auth.service';
 
 const routes: Routes = [
   {
-    path:'app',
-    component:AppComponent,
+    path: 'app',
+    component: AppComponent,
     data: {
       title: 'App',
-      description:'Description Meta Tag Content',
+      description: 'Description Meta Tag Content',
       ogUrl: 'your og url'
     }
   },
   {
-    path:'welcome',
-    component:WelcomeComponent
+    path: 'welcome',
+    component: WelcomeComponent
   },
   {
     path: 'home',
     component: HomeComponent,
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'filenotfound',
     component: FileNotFoundComponent
   },
   {
-    path:'error',
-    component:ErrorComponent
+    path: 'error',
+    component: ErrorComponent
   },
   {
     path: 'login',
@@ -73,12 +73,12 @@ const routes: Routes = [
   {
     path: 'users',
     loadChildren: './user/user.module#UserModule',
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'questions',
     loadChildren: './questions/questions.module#QuestionsModule',
-    outlet:'mainContent'
+    outlet: 'mainContent'
   },
   {
     path: '',
@@ -107,7 +107,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserAnimationsModule, // required animations module
-    RouterModule.forRoot(routes,{useHash: false}),
+    RouterModule.forRoot(routes, { useHash: false }),
     //
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
@@ -140,11 +140,14 @@ const routes: Routes = [
       useClass: HttpConfigInterceptor,
       multi: true
     },
-    {provide: ErrorHandler, useClass: GlobalErrorHandlerService},
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandlerService
+    },
     SsoAuthService
 
   ],
 
-  schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class AppRoutingModule { }
