@@ -36,6 +36,8 @@ require('./app/routes/note.routes.js')(app);
 // Require Notes routes
 require('./app/routes/test.routes.js')(app);
 
+require('./app/routes/env.routes.js')(app);
+
 
 app.listen(4100,function(){
     console.log('Server running on the port 4100');

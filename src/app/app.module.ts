@@ -34,7 +34,7 @@ const appInitializerFn = (appConfig: ConfigService) => {
     BrowserAnimationsModule,
     AppRoutingModule,
     LoggerModule.forRoot({
-      serverLoggingUrl: 'http://localhost:3000/logger',
+      serverLoggingUrl: 'http://localhost:4100/logger',
       level: NgxLoggerLevel.TRACE,
       serverLogLevel: NgxLoggerLevel.ERROR,
       disableConsoleLogging: false
