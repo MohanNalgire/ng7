@@ -278,6 +278,87 @@
       "fileName": "main.js",
       "lineNumber": "507",
       "id": 31
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:13:34.851Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 32
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:15:01.368Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 33
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:15:01.754Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 34
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:15:02.628Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 35
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:16:06.291Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 36
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:16:06.475Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 37
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:16:06.778Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 38
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:16:45.965Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 39
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:18:30.346Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 40
     }
   ],
   "users": [
