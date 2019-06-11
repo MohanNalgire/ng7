@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compile:server": "webpack --config webpack.server.config.js --progress --colors",
+    "serve:ssr": "node dist/server",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
+    "build:client-and-server-bundles": "ng build --prod && ng run ng7project:server:production"
   },
   "private": true,
   "dependencies": {
@@ -27,9 +31,12 @@
     "@ngrx/store": "^8.0.1",
     "@ngrx/store-devtools": "^8.0.1",
     "@types/crypto-js": "^3.1.43",
+    "auth0-js": "^9.10.2",
+    "auth0-lock": "^11.16.0",
     "bootstrap": "^4.3.1",
     "core-js": "^3.1.3",
     "crypto-js": "^3.1.9-1",
+    "express": "^4.15.2",
     "http-status-codes": "^1.3.2",
     "jquery": "^3.4.1",
     "jwt-decode": "^2.2.0",
@@ -46,7 +53,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.800.2",
     "@angular/cli": "^8.0.2",
-    "@angular/compiler-cli": "~8.0.0",
+    "@angular/compiler-cli": "^8.0.0",
     "@angular/language-service": "~8.0.0",
     "@types/jasmine": "~3.3.13",
     "@types/jasminewd2": "~2.0.3",

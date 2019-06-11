@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { SeoService } from './common/services/seo.service';
 import { EnvService } from './env.service';
 import { NGXLogger } from 'ngx-logger';

@@ -9,7 +9,18 @@ export const environment = {
 
   apiUrl: 'http://localhost:68552/', // Replace with local API
   logLevel: NgxLoggerLevel.WARN,
-  serverLogLevel: NgxLoggerLevel.OFF
+  serverLogLevel: NgxLoggerLevel.OFF,
+
+
+  auth: {
+    clientID: 'hYqizA4QzlmWT99f0F57sO7mj80CjKBG',
+    domain: 'dev--ymm8kx2.auth0.com', // e.g., you.auth0.com
+    audience: 'YOUR-AUTH0-API-IDENTIFIER', // e.g., http://localhost:3001
+    redirect: 'http://localhost:4200/callback',
+    scope: 'openid profile email'
+  }
+
+
 };
 
 /*

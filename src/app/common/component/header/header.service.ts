@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable,throwError } from 'rxjs';
+import { CUSTOM_URLS } from 'src/app/core/urls.constant';
 
 export interface VisibleMenu {
   'welcome': boolean,
@@ -18,7 +19,8 @@ export interface VisibleMenu {
 
 
 export class HeaderService {
-  headerApiUrl = 'http://localhost:3000/headerMenu';
+  //headerApiUrl = 'http://localhost:4100/headerMenu';\
+  headerApiUrl =CUSTOM_URLS.urlHeaderMenu;
   visibleMenu: any;
   constructor(private _http: HttpClient) { }
 

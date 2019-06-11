@@ -4,6 +4,7 @@ import { User } from './../user/user';
 import { catchError, map, tap, filter, find } from 'rxjs/operators';
 import { Observable, BehaviorSubject, throwError, of } from 'rxjs';
 import { UserService } from '../user/user.service';
+import { SsoAuthService } from '../common/services/sso-auth.service';
 
 
 @Injectable({
@@ -12,14 +13,14 @@ import { UserService } from '../user/user.service';
 export class LoginService {
 
   loginResult = null;
-  constructor(private _http: HttpClient,private userService:UserService) { }
+  constructor(private _http: HttpClient,private userService:UserService,private ssoAuthService:SsoAuthService) { }
 
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
 
   allUsers: Array<User>;
-  private apiURL = 'http://localhost:3000/users'
+  private apiURL = 'http://localhost:4100/users'
 
   objBody = {
     "id": 0,
@@ -49,6 +50,9 @@ export class LoginService {
   }
 
   checkUserLogin(username, password) {
+
+    console.log('this.ssoservice.login()',this.ssoAuthService.login());
+
     return this._http.get<User[]>(this.apiURL)
       .pipe(
         map(results => results.filter(r => {
@@ -81,9 +85,10 @@ export class LoginService {
 
 
    logout(){
-     let status;
-     status=sessionStorage.removeItem('userDetails');
-        if(status==undefined){
+     let sessionStatus,localStatus;
+     sessionStatus=sessionStorage.removeItem('userDetails');
+     localStatus=localStorage.removeItem('userDetails');
+        if(typeof localStatus==='undefined' && sessionStatus==='undefined'){
           console.log('test on logout');
           return true;
         }else{

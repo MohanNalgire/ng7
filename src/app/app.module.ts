@@ -30,11 +30,11 @@ const appInitializerFn = (appConfig: ConfigService) => {
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     LoggerModule.forRoot({
-      serverLoggingUrl: 'http://localhost:3000/logger',
+      serverLoggingUrl: 'http://localhost:4100/logger',
       level: NgxLoggerLevel.TRACE,
       serverLogLevel: NgxLoggerLevel.ERROR,
       disableConsoleLogging: false

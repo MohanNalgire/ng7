@@ -11,11 +11,14 @@ import { TypeCheckCompiler } from '@angular/compiler/src/view_compiler/type_chec
 export class QuestionsComponent implements OnInit {
   public questionsList: any;
   public combineReq;
+  public diffData:any;
   constructor(
     private qs: QuestionsService
   ) { }
 
   ngOnInit() {
+    this.diffTable();
+    /*
 
     this.combineReq = forkJoin(
       this.qs.getQuestions(),
@@ -49,7 +52,19 @@ export class QuestionsComponent implements OnInit {
         },
         error => { console.error('Error for questions service subscribe.', error); },
         () => { console.info('Questions Service call compelted.'); }
-      );
+      ); */
+  }
+
+
+  diffTable(){
+    this.qs.getDiffrence()
+    .subscribe(
+      data=>{console.log('Result of the diffrrence service',data);
+    this.diffData=data;},
+      error=>{console.error('Error in the diffrence service.',error);},
+      ()=>{console.info('Complete diffrence service.');}
+    );
+    console.log('test this',);
   }
 
 }
