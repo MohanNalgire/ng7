@@ -359,6 +359,24 @@
       "fileName": "main.js",
       "lineNumber": "697",
       "id": 40
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:30:26.283Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 41
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-11T19:30:26.254Z",
+      "fileName": "main.js",
+      "lineNumber": "697",
+      "id": 42
     }
   ],
   "users": [
