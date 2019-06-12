@@ -377,6 +377,24 @@
       "fileName": "main.js",
       "lineNumber": "697",
       "id": 42
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-12T14:20:49.993Z",
+      "fileName": "main.js",
+      "lineNumber": "703",
+      "id": 43
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-12T14:21:18.171Z",
+      "fileName": "main.js",
+      "lineNumber": "703",
+      "id": 44
     }
   ],
   "users": [
@@ -639,7 +657,7 @@
       "ticketId": 2
     }
   ],
-  "env": [
+  "environments": [
     {
       "title": "prod",
       "header": {
