@@ -404,6 +404,15 @@
       "fileName": "main.js",
       "lineNumber": "703",
       "id": 45
+    },
+    {
+      "message": "Error message",
+      "additional": [],
+      "level": 5,
+      "timestamp": "2019-06-12T19:00:42.017Z",
+      "fileName": "main.js",
+      "lineNumber": "703",
+      "id": 46
     }
   ],
   "users": [
