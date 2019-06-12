@@ -26,10 +26,18 @@ export class LoginComponent implements OnInit {
 
   loginSubmit() {
     console.warn(this.profileForm.value.name);
+    
     var enteredValue = this.profileForm.value;
 
     if (enteredValue) {
       this._ls.checkUserLogin(enteredValue.name,enteredValue.pwd)
+      .subscribe(
+        data=>{
+          console.log('data',data);
+        }
+      );
+      
+      /*
         .subscribe(result => {
           console.log("result", result);
           this.loginResult = result[0];
@@ -46,7 +54,7 @@ export class LoginComponent implements OnInit {
                 sessionStorage.setItem('userDetails',JSON.stringify(userDetails));
               }
 
-              this.router.navigate(['/home']);
+              //this.router.navigate(['/home']);
             }
             else {
               console.log('Not a valid user', enteredValue);
@@ -55,9 +63,8 @@ export class LoginComponent implements OnInit {
           } else {
 
           }
-
         });
-
+*/
     } else {
 
     }
