@@ -56,7 +56,7 @@ export class LoginService {
         if (userDetails.password === password && userDetails.username === username) {
           //Set sesssion here
           sessionStorage.setItem('userDetails', JSON.stringify(userDetails));
-
+          console.log('this.ssoservice.login()',this.ssoAuthService.login());
           return true;
         } else {
           return false;

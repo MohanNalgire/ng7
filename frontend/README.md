@@ -106,6 +106,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Reference :
 1   [Prime ng and prime faces](https://www.primefaces.org/primeng/#/)
 
+angular.json file add styles array
+
+```
+"node_modules/primeng/resources/themes/nova-light/theme.css",
+"node_modules/primeng/resources/primeng.min.css",
+"node_modules/primeng/resources/themes/darkness/theme.css"
+```
+
 ## 9    Providers(User defined factory function and constatns)
 
 ## 10   SEO friendly application
