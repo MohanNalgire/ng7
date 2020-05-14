@@ -1,5 +1,4 @@
-import { Action } from '@ngrx/store';
-import {User} from '../user';
+import * as store from '@ngrx/store';
 
 
 export enum UserActionTypes {
@@ -10,16 +9,16 @@ export enum UserActionTypes {
 
 
 
-export class LoadUser implements Action {
+export class LoadUser implements store.Action {
     public readonly type=UserActionTypes.LOAD_USER;
 }
 
-export class LoadUserSuccess implements Action{
+export class LoadUserSuccess implements store.Action{
     public readonly type =UserActionTypes.LOAD_USER_SUCCESS;
     constructor(public payload:{users:any}){}
 }
 
-export class LoadUserFail implements Action{
+export class LoadUserFail implements store.Action{
     public readonly type = UserActionTypes.LOAD_USER_FAIL;
 
     constructor(public payload:string){}

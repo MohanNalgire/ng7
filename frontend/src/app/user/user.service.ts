@@ -6,8 +6,7 @@ import  { CUSTOM_URLS } from '../core/urls.constant';
   providedIn: 'root'
 })
 export class UserService {
-  //userApiUrl='http://localhost:4100/users';
-  userApiUrl=CUSTOM_URLS.urlUsers;
+  private userApiUrl=CUSTOM_URLS.urlUsers;
   constructor(private _http: HttpClient) { }
 
   getUsers() {

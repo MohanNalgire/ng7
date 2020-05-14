@@ -1,40 +1,26 @@
-<div class="questions" *ngFor="let question of questionsList">
-  {{question|json}}
 
-  <div class="row">
-    <div class="col-md-2">{{question.id}}</div>
-    <div class="col-md-8">{{question.question}}</div>
-    <div class="col-md-2">{{question.userId}}</div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">{{question.techIds}}</div>
-    <div class="col-md-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-6"></div>
-    <div class="col-md-6"></div>
-  </div>
-</div>
-
-<!-- {{diffData|json}} -->
-<table border="2" *ngFor="let diff of diffData" style="align-content: center">
+<div class="container">
+<table border="2">
+  <caption>{{differencequestion}}</caption>
   <thead>
-    <th>Point No1</th>
-    <th>{{diff.leftTitle}}</th>
-    <th>{{diff.rightTitle}}</th>
+    <tr>
+      <ng-container *ngFor="let item of diffHeaders|keyvalue">
+        <td *ngIf="item.key !=='id'">
+          {{item.value}}
+        </td>
+      </ng-container>
+    </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of diff.rows">
-        <td>{{row.name}}</td>
-        <td colspan="2">
-          <table border="1">
-            <tr *ngFor="let point of row.points" >
-              <td>{{point.left}}</td>
-              <td>{{point.right}}</td>
-            </tr>
-          </table>
+    <tr *ngFor="let row of diffData">
+      <ng-container *ngFor="let item of diffHeaders|keyvalue">
+        <ng-container *ngFor="let td of row|keyvalue">
+          <td *ngIf="item.value===td.key">
+            <span>{{td.value}}</span>
           </td>
-     </tr>
+        </ng-container>
+      </ng-container>
+    </tr>
   </tbody>
-  <tfoot></tfoot>
 </table>
+</div>

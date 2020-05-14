@@ -8,7 +8,6 @@ import { CUSTOM_URLS } from '../../core/urls.constant';
   providedIn: 'root'
 })
 export class SeoService {
-//  private urlPageMetaApi: string = 'http://localhost:4100/pageMetaTags';
 private urlPageMetaApi: string =CUSTOM_URLS.urlPageMetaTags;
 
   constructor(private meta: Meta, private title: Title, private _http: HttpClient, private env: EnvService) {

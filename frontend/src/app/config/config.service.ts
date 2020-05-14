@@ -5,24 +5,24 @@ import { CUSTOM_URLS } from '../core/urls.constant';
 @Injectable({
   providedIn: 'root'
 })
+// Currently not implemented
 export class ConfigService {
-  private appConfig;
-  //private configEnv='http://localhost:4100/env';
+  static appConfig;
   private configEnv=CUSTOM_URLS.urlconfigEnv;
 
   constructor(private http: HttpClient) { }
 
   loadAppConfig() {
-    return this.http.get(this.configEnv)
-      .toPromise()
-      .then(data => {
+    this.http.get(this.configEnv,{})
+      .subscribe(data => {
         console.log('data server meta tags',data);
-        this.appConfig = data;
+        ConfigService.appConfig = data;
+        ConfigService.appConfig.freeze();
       });
   }
 
   getConfig() {
-    return this.appConfig;
+    return ConfigService.appConfig;
   }
 
 }

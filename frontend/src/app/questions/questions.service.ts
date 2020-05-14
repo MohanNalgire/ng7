@@ -1,38 +1,45 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CUSTOM_URLS } from '../core/urls.constant';
+import { CustomHttpClientService } from '../common/services/customHttpClient.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionsService {
-  /*
-  private url:string='http://localhost:4100/questions';
-  private urlTechnologies:string='http://localhost:4100/technologies';
-  private urlUsers:string='http://localhost:4100/users';
-  private diffrence:string='http://localhost:4100/diffrence';s
-  */
-
-  private url:string=CUSTOM_URLS.urlQuestions;
+  private urlQuestions:string=CUSTOM_URLS.urlQuestions;
   private urlTechnologies:string=CUSTOM_URLS.urlTechnologies;
   private urlUsers:string=CUSTOM_URLS.urlUsers;
   private diffrence:string=CUSTOM_URLS.urlDiffrence;
+  private diffrenceHeaders:string=CUSTOM_URLS.urlDiffrenceHeaders;
+  private logger:string=CUSTOM_URLS.urlLogger;
 
-
-  constructor(private _http:HttpClient) { }
+  constructor(private _http:CustomHttpClientService) { }
 
   getQuestions(){
-    return this._http.get(this.url);
+    return this._http.getCall(this.urlQuestions);
+  }
+  getQuestion(id){
+    return this._http.getCall(`${this.urlQuestions}?id=${id}`);
   }
 
   getQuestionTechnlogies(){
-    return this._http.get(this.urlTechnologies);
+    return this._http.getCall(this.urlTechnologies);
   }
 
   getQuestionUsers(){
-    return this._http.get(this.urlUsers);
+    return this._http.getCall(this.urlUsers);
   }
 
-  getDiffrence(){
-    return this._http.get(this.diffrence);
+  getDiffrenceHeads(id){
+    return this._http.getCall(`${this.diffrenceHeaders}?id=${id}`);
+  }
+
+  getDiffrence(id){
+    return this._http.getCall(`${this.diffrence}?id=${id}`);
+  }
+
+  getLogger(){
+    return this._http.getCall(this.logger);
   }
 }

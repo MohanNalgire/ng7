@@ -15,6 +15,7 @@ import { ErrorComponent } from './common/component/error/error.component';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 import { ToastrModule } from 'ngx-toastr';
+import { CUSTOM_URLS } from './core/urls.constant';
 
 const appInitializerFn = (appConfig: ConfigService) => {
   return () => {
@@ -34,7 +35,7 @@ const appInitializerFn = (appConfig: ConfigService) => {
     BrowserAnimationsModule,
     AppRoutingModule,
     LoggerModule.forRoot({
-      serverLoggingUrl: 'http://localhost:4100/logger',
+      serverLoggingUrl: CUSTOM_URLS.urlLogger,
       level: NgxLoggerLevel.TRACE,
       serverLogLevel: NgxLoggerLevel.ERROR,
       disableConsoleLogging: false

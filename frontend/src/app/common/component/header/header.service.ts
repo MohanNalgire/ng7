@@ -19,7 +19,6 @@ export interface VisibleMenu {
 
 
 export class HeaderService {
-  //headerApiUrl = 'http://localhost:4100/headerMenu';\
   headerApiUrl =CUSTOM_URLS.urlHeaderMenu;
   visibleMenu: any;
   constructor(private _http: HttpClient) { }

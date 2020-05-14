@@ -5,6 +5,7 @@ import { catchError, map, tap, filter, find } from 'rxjs/operators';
 import { Observable, BehaviorSubject, throwError, of } from 'rxjs';
 import { UserService } from '../user/user.service';
 import { SsoAuthService } from '../common/services/sso-auth.service';
+import { CUSTOM_URLS } from '../core/urls.constant';
 
 
 @Injectable({
@@ -12,15 +13,19 @@ import { SsoAuthService } from '../common/services/sso-auth.service';
 })
 export class LoginService {
 
-  loginResult = null;
-  constructor(private _http: HttpClient, private userService: UserService, private ssoAuthService: SsoAuthService) { }
+  isAuthenticated = false;
+  authToken='';
+  constructor(
+    private _http: HttpClient,  
+    private ssoAuthService: SsoAuthService
+    ) { }
 
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
 
   allUsers: Array<User>;
-  private apiURL = 'http://localhost:4100/users'
+  private apiURL = CUSTOM_URLS.urlUsers;
 
   objBody = {
     "id": 0,
@@ -80,8 +85,10 @@ export class LoginService {
     let userDetails: any;
     userDetails = JSON.parse(sessionStorage.getItem('userDetails'));
     if (userDetails) {
-      return (userDetails.userName && userDetails.userPassword) ? true : false;
+      this.isAuthenticated=(userDetails.userName && userDetails.userPassword) ? true : false;
+      return this.isAuthenticated;
     } else {
+      this.isAuthenticated=false;
       return false;
     }
   }

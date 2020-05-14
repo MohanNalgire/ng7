@@ -13,12 +13,10 @@ import { HomeComponent } from './common/component/home/home.component';
 import { QuestionsService } from './questions/questions.service';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { HttpConfigInterceptor } from './common/interceptors/httpconfig.interceptor';
 
 //Store setup
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { environment } from '../environments/environment';
@@ -36,6 +34,9 @@ import { GlobalErrorHandlerService } from './common/services/global-error-handle
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SsoAuthService } from './common/services/sso-auth.service';
+import { FormsModule } from '@angular/forms';
+import { InterceptorProviders } from './common/interceptors/interceptors';
+import { CustomHttpClientService } from './common/services/customHttpClient.service';
 
 
 
@@ -68,16 +69,16 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: './login/login.module#LoginModule'
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
     path: 'users',
-    loadChildren: './user/user.module#UserModule',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule),
     canActivate: [AuthGuard]
   },
   {
     path: 'questions',
-    loadChildren: './questions/questions.module#QuestionsModule',
+    loadChildren: () => import('./questions/questions.module').then(m => m.QuestionsModule),
     outlet: 'mainContent'
   },
   {
@@ -108,6 +109,7 @@ const routes: Routes = [
     CommonModule,
     BrowserAnimationsModule, // required animations module
     RouterModule.forRoot(routes, { useHash: false }),
+    FormsModule,
     //
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
@@ -135,11 +137,7 @@ const routes: Routes = [
   ],
   providers: [
     QuestionsService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpConfigInterceptor,
-      multi: true
-    },
+    InterceptorProviders,
     {
       provide: ErrorHandler,
       useClass: GlobalErrorHandlerService
