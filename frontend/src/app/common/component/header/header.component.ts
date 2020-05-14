@@ -1,7 +1,6 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Router, NavigationEnd, Event } from '@angular/router';
 import { HeaderService, VisibleMenu } from './header.service';
-import { observable, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',

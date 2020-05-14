@@ -1,12 +1,14 @@
 const express =require('express');
 const bodyParser = require('body-parser');
-
+var cors = require('cors');
 //create express app
 var app =express();
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
+
+app.use(cors());
 
 
 // Configuring the database
@@ -38,7 +40,9 @@ require('./app/routes/test.routes.js')(app);
 
 require('./app/routes/env.routes.js')(app);
 
+require('./app/routes/log.routes.js')(app);
 
-app.listen(4100,function(){
-    console.log('Server running on the port 4100');
+const port=3000;
+app.listen(port,function(){
+    console.log(`Server running on the port ${port}`);
 })

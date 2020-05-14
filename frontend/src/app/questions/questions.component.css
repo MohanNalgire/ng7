@@ -5,3 +5,8 @@
     font-family: open sans-serif;
     font-size: 20px;
 }
+
+caption{
+    caption-side: top;
+    color: black;
+}
