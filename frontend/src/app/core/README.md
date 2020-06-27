@@ -63,7 +63,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 15   Single sign on
 ## 16   Setting base href dynamically
 ## 17   Using HTML code as service response to show in component
-## 18   How to use `ng deploy`
+
 
 
 #Details
@@ -201,7 +201,7 @@ angular.json file add styles array
 1       [Simple single sign on Alligator](https://alligator.io/angular/authentication-auth0/)
 
 
-###      Authentication and authorization protocols Auth0 supports(Identity protocols)
+##      Authentication and authorization protocols Auth0 supports(Identity protocols)
         Common and popular identity protocols
         1       OAuth 2.0
         2       OpenID Connect
@@ -214,7 +214,7 @@ angular.json file add styles array
 2       [OAuth 2.0](https://auth0.com/docs/api/authentication?http#login)
 
 
-## 16   Setting base href dynamically
+## 15   Setting base href dynamically
 
 
 ### Reference   :
@@ -223,7 +223,7 @@ angular.json file add styles array
 
 
 ### Not implemented
-## 17     Using HTML code from service response 
+##      Using HTML code from service response 
 How to include the HTML code in angular template with code security
 Angular 2, DomSanitizer, bypassSecurityTrustHtml, SVG
 
@@ -233,20 +233,4 @@ https://stackoverflow.com/questions/49832358/angular-5-how-to-insert-a-string-as
 https://angular.io/api/platform-browser/DomSanitizer
 https://forum.ionicframework.com/t/inserting-html-via-angular-2-use-of-domsanitizationservice-bypasssecuritytrusthtml/62562
 https://www.oodlestechnologies.com/blogs/How-To-Display-Dynamic-HTML-Without-Sanitizing-Or-Filtering-Using-Pipe/
-
-## 18   How to use `ng deploy`
-
-### Reference   :
-https://angular.schule/blog/2019-08-ng-deploy
-https://medium.com/coinmonks/how-to-deploy-an-angular-app-8db1af39f8c1
-https://scotch.io/courses/build-your-first-angular-website/angular-cli-serving-and-building-for-production
-https://hub.packtpub.com/angular-cli-8-3-0-releases-with-a-new-deploy-command-faster-production-builds-and-more/
-
-## 19   How to use `ng lint`
-
-### Reference   :
-https://angular.io/cli/lint
-In latest angular version ng lint not working
-https://stackoverflow.com/questions/40371212/angular-cli-using-ng-lint
-https://levelup.gitconnected.com/angular-cli-useful-commands-1023e93b843b
 
