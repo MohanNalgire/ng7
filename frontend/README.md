@@ -250,3 +250,44 @@ In latest angular version ng lint not working
 https://stackoverflow.com/questions/40371212/angular-cli-using-ng-lint
 https://levelup.gitconnected.com/angular-cli-useful-commands-1023e93b843b
 
+## 20 How to use sonar Qube with angular
+
+### Reference   :
+http://musttoknow.com/setup-sonar-sonarqube-sonarts-angular-4-5-7/
+
+## 21 How manage application session in angular 
+
+### Referece    :
+Handling session timeout in Angular
+https://long2know.com/2017/12/angular-user-session-timeout/
+
+
+Old Angularjs reference 
+https://stackoverflow.com/questions/16696969/angular-session-timeout-and-management
+
+Other relevant references
+https://github.com/moribvndvs/ng-idle
+
+https://programmingwithnaveen.com/2017/12/24/handling-session-timeout-in-angular/
+
+Download Source code from Github – https://github.com/programmingwithnaveen/Session-Timeout
+
+Demo Video – https://www.youtube.com/watch?v=Gnwb0-SOHCQ
+
+
+## 22 How to use session timout with idle user in angular application
+
+### Referece    :
+how-to-implement-idle-timeout-in-angular
+https://blog.bitsrc.io/how-to-implement-idle-timeout-in-angular-af61eefdb13b
+
+https://bearnithi.com/2020/03/22/how-to-handle-user-idleness-and-session-timeout-in-angular/
+
+
+https://moribvndvs.github.io/ng2-idle/
+https://stackoverflow.com/questions/39192832/angular-2-logout-using-ng2-idle
+
+
+Angular 2 - Auto Logout using ng2-idle
+https://www.code-sample.com/2017/07/angular-2-auto-logout-using-ng2-idle.html
+
