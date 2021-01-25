@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -43,6 +43,10 @@ const appInitializerFn = (appConfig: ConfigService) => {
     ToastrModule.forRoot()
   ],
   providers: [
+    {
+      provide:APP_BASE_HREF,
+      useValue:window['_app_base'] || '/'
+    },
     /**
      *  Process for environment variable declarations
      *  1   EnvServiceProvider
