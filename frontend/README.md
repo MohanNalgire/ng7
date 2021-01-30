@@ -70,6 +70,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 1    Module Base architecture.
 
 ## 2    Lazy loading module
+### Lazy loaded module and named routes (Auxillary routes)
+### Reference :
+Concept :
+[Angular-university](https://blog.angular-university.io/angular2-router/)
+Known issue:
+ [Stack overflow](https://stackoverflow.com/questions/47482230/angular-4-lazy-loading-with-named-router-outlet-not-working)
+Syntax:
+[Stack overflow](https://stackoverflow.com/questions/42094152/targeting-named-outlet-via-routerlink-adds-extraneous)
 
 ## 3    Dynamic Environment settings
 ### Reference :
