@@ -1,7 +1,7 @@
 #       Concept Project
 
 ##      This is concept project where we check solutions for project base concepts.
-##      Here you get multiple solutions for on concept with different structure.
+##      Here you get multiple solutions for each following concept with different structure.
 
 
 
